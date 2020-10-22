@@ -6,7 +6,7 @@ function error { echo -e "[Error] $*"; exit 1; }
 function warn  { echo -e "[Warning] $*"; }
 
 DIR_ME="ubuntu"
-DIR_HASSIO=/home/${DIR_ME}/docker/hassio
+DIR_HASSIO=/home/ubuntu/docker/hassio
 
 
 echo "[Info] Install dependencies: bash jq curl avahi-daemon dbus software-properties-common apparmor-utils"
