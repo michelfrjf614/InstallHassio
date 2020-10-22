@@ -24,11 +24,11 @@ sudo apt-get install docker-ce -y
 
 
 echo "[Info] Install Home Assistant"
-curl -sL https://raw.githubusercontent.com/icanfixitweb/Hassio-Virtual-Machine/master/hassio_install_script/original_script/installer.sh | bash -s -- -d $DIR_HASSIO
+sudo curl -sL https://raw.githubusercontent.com/icanfixitweb/Hassio-Virtual-Machine/master/hassio_install_script/original_script/installer.sh | bash -s -- -d $DIR_HASSIO
 
 
 echo "[Info] Install Home Assistant from latest script from Home assistant GitHub (working as of Sept. 2020)"
-curl -sL https://raw.githubusercontent.com/home-assistant/supervised-installer/master/installer.sh | bash -s
+sudo curl -sL https://raw.githubusercontent.com/home-assistant/supervised-installer/master/installer.sh | bash -s
 
 echo "If Network Manager is not installed [[error] missing: NetworkManager] install it first and then run the command above again:"
 echo "sudo apt-get install network-manager"
