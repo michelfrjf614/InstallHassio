@@ -27,6 +27,7 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 sudo apt-get update
 sudo apt-get install docker-ce -y
 
+sudo chmod 777 /etc
 sudo su
 
 echo "[Info] Install Home Assistant -"
