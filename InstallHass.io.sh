@@ -12,6 +12,8 @@ DIR_HASSIO=/home/${DIR_ME}/docker/hassio
 echo "[Info] Install dependencies: bash jq curl avahi-daemon dbus software-properties-common apparmor-utils"
 sudo apt-get install bash jq curl avahi-daemon dbus software-properties-common apparmor-utils
 
+sudo apt-get install network-manager
+
 echo "[Info] Install apt-transport-https ca-certificates curl software-properties-common -y"
 sudo apt-get install apt-transport-https ca-certificates curl software-properties-common -y
 
