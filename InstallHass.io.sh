@@ -23,7 +23,7 @@ sudo apt-get update
 sudo apt-get install docker-ce -y
 
 
-echo "[Info] Install Home Assistant"
+echo "[Info] Install Home Assistant - SUDO"
 sudo curl -sL https://raw.githubusercontent.com/icanfixitweb/Hassio-Virtual-Machine/master/hassio_install_script/original_script/installer.sh | bash -s -- -d $DIR_HASSIO
 
 
