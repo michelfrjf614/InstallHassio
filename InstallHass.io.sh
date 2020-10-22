@@ -33,6 +33,8 @@ sudo su
 echo "[Info] Install Home Assistant -"
 sudo curl -sL https://raw.githubusercontent.com/icanfixitweb/Hassio-Virtual-Machine/master/hassio_install_script/original_script/installer.sh | bash -s -- -d $DIR_HASSIO
 
+sudo chmod 777 /etc/hassio.json 
+
 echo "[Info] Install Home Assistant from latest script from Home assistant GitHub (working as of Sept. 2020)"
 sudo curl -sL https://raw.githubusercontent.com/home-assistant/supervised-installer/master/installer.sh | bash -s
 
