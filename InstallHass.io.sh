@@ -1,13 +1,12 @@
-
 #!/usr/bin/env bash
+
+set -e
 
 function error { echo -e "[Error] $*"; exit 1; }
 function warn  { echo -e "[Warning] $*"; }
-set -e
 
-
-DIR_ME = ubuntu
-DIR_HASSIO = /home/${DIR_ME}/docker/hassio
+DIR_ME="ubuntu"
+DIR_HASSIO=/home/${DIR_ME}/docker/hassio
 
 
 echo "[Info] Install dependencies: bash jq curl avahi-daemon dbus software-properties-common apparmor-utils"
