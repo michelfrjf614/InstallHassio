@@ -10,8 +10,8 @@ DIR_HASSIO=/home/ubuntu/docker/hassio
 
 
 echo "[Info] Install dependencies: bash jq curl avahi-daemon dbus software-properties-common apparmor-utils"
-sudo snap install jq
-sudo apt-get install bash curl avahi-daemon dbus software-properties-common apparmor-utils
+#sudo snap install jq
+sudo apt-get install bash jq curl avahi-daemon dbus software-properties-common apparmor-utils
 
 
 echo "[Info] Install network-manager"
