@@ -62,7 +62,7 @@ echo "Baixar o Portainerio"
 echo "docker run -d -p 9000:9000 -p 8000:8000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v /path/on/host/data:/data portainer/portainer"
 echo "docker run -d -p 9000:9000 -p 8000:8000 --name portainer --restart always  -v /path/to/certs:/certs -v portainer_data:/data portainer/portainer -H tcp://<DOCKER_HOST>:<DOCKER_PORT> --tlsverify"
 
-echo "configurar o arquivo /etc/mosquitoo.conf dentro do container do docker com as infomacoes a seguir"
+echo "configurar o arquivo /etc/mosquitoo.conf dentro do container do docker com as infomacoes a seguir para tal conect via console"
 
 echo "# Add TLS protected MQTT"
 echo "listener 8883"
