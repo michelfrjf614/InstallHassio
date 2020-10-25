@@ -55,3 +55,27 @@ echo ""
 echo ""
 echo "Once the installation is completed go to http://hassio.local:8123/ or http://yourIPaddress:8123/"
 echo "(replace yourIPaddress with your actual IP address) from your web browser to access your new Home Assistant installation."
+
+
+
+echo "Baixar o Portainerio" 
+echo "docker run -d -p 9000:9000 -p 8000:8000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v /path/on/host/data:/data portainer/portainer"
+echo "docker run -d -p 9000:9000 -p 8000:8000 --name portainer --restart always  -v /path/to/certs:/certs -v portainer_data:/data portainer/portainer -H tcp://<DOCKER_HOST>:<DOCKER_PORT> --tlsverify"
+
+echo "configurar o arquivo /etc/mosquitoo.conf dentro do container do docker com as infomacoes a seguir"
+
+echo "# Add TLS protected MQTT"
+echo "listener 8883"
+echo "cafile  /ssl/chain.pem"
+echo "certfile  /ssl/fullchain.pem"
+echo "keyfile  /ssl/privkey.pem"
+
+echo "listener 9001"
+echo "protocol websockets"
+
+echo "# Add TLS protected MQTT via websockets"
+echo "listener 8443"
+echo "protocol websockets"
+echo "cafile  /ssl/chain.pem"
+echo "certfile  /ssl/fullchain.pem"
+echo "keyfile  /ssl/privkey.pem"
