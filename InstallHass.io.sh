@@ -58,22 +58,22 @@ echo "[Info] Create folders for mosquitto"
 sudo mkdir /usr/share/hassio/share/mosquitto/
 sudo mkdir /usr/share/hassio/share/mosquitto/config/
 sudo mkdir /usr/share/hassio/share/mosquitto/data
-sudo mkdir /usr/share/hassio/share/mosquitto/config/log
+sudo mkdir /usr/share/hassio/share/mosquitto/log
 
-sudo chmod 755 /usr/share/hassio/share/mosquitto/
-sudo chmod 755 /usr/share/hassio/share/mosquitto/config/
-sudo chmod 755 /usr/share/hassio/share/mosquitto/data
-sudo chmod 755 /usr/share/hassio/share/mosquitto/config/log
+sudo chmod 777 /usr/share/hassio/share/mosquitto/
+sudo chmod 777 /usr/share/hassio/share/mosquitto/config/
+sudo chmod 777 /usr/share/hassio/share/mosquitto/data
+sudo chmod 777 /usr/share/hassio/share/mosquitto/log
 echo ""
 echo ""
 echo "[Info] Download addMosquitto.conf"
 sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/addMosquitto.conf > "/usr/share/hassio/share/mosquitto/config/addMosquitto.conf"
-sudo chmod 755 /usr/share/hassio/share/mosquitto/config/addMosquitto.conf
+sudo chmod 777 /usr/share/hassio/share/mosquitto/config/addMosquitto.conf
 echo ""
 echo ""
 echo "[Info] File ACL - accesscontrollist"
 sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/accesscontrollist > "/usr/share/hassio/share/mosquitto/config/accesscontrollist"
-sudo chmod 755 /usr/share/hassio/share/mosquitto/config/accesscontrollist
+sudo chmod 777 /usr/share/hassio/share/mosquitto/config/accesscontrollist
 echo ""
 echo ""
 #echo "[Info] Run mosquitto on docker "
@@ -112,3 +112,7 @@ echo ""
 #echo "(replace yourIPaddress with your actual IP address) from your web browser to access your new Home Assistant installation."
 
 
+
+echo "the certificate files must have ".crt" as the file ending and you must run"
+echo "Extrair .crt de .pem:"
+echo "openssl crl2pkcs7 -nocrl -certfile cert.pem | openssl pkcs7 -print_certs -out cert.crt"
