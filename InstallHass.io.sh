@@ -64,13 +64,18 @@ sudo chmod 755 /usr/share/hassio/share/mosquitto/
 sudo chmod 755 /usr/share/hassio/share/mosquitto/config/
 sudo chmod 755 /usr/share/hassio/share/mosquitto/data
 sudo chmod 755 /usr/share/hassio/share/mosquitto/config/log
-
-echo "[Info] Download addMosquitto.conf for "
-sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/mosquitto.conf > "/usr/share/hassio/share/mosquitto/config/addMosquitto.conf"
+echo ""
+echo ""
+echo "[Info] Download addMosquitto.conf"
+sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/addMosquitto.conf > "/usr/share/hassio/share/mosquitto/config/addMosquitto.conf"
 sudo chmod 755 /usr/share/hassio/share/mosquitto/config/addMosquitto.conf
-
-#echo ""
-#echo ""
+echo ""
+echo ""
+echo "[Info] File ACL - accesscontrollist"
+sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/accesscontrollist > "/usr/share/hassio/share/mosquitto/config/accesscontrollist"
+sudo chmod 755 /usr/share/hassio/share/mosquitto/config/accesscontrollist
+echo ""
+echo ""
 #echo "[Info] Run mosquitto on docker "
            sudo docker run -it --name=mosquitto -p 1883:1883 -p 1884:1884 -p 8883:8883 -p 8884:8884 -p 9001:9001 -v /mosquitto/:/mosquitto/ -v /mosquitto/log:/mosquitto/log -v /mosquitto/data/:/mosquitto/data/  eclipse-mosquitto
 # Example: sudo docker run -it --name=“mosquitto” –restart on-failure -p 1883:1883 -p 1884:1884 -p 8883:8883 -p 8884:8884 -p 9001:9001 -v /srv/mqtt/config:/mqtt/config:ro  -v /srv/mqtt/log:/mqtt/log  -v /srv/mqtt/data/:/mqtt/data/ eclipse-mosquitto
