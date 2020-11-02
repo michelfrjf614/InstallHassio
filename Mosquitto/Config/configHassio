@@ -1,0 +1,19 @@
+============================================================================================
+Mosquitto Broker - Configuration
+- https://mosquitto.org/man/mosquitto-conf-5.html
+- https://mosquitto.org/man/mosquitto_passwd-1.html
+- https://obrienlabs.net/how-to-setup-your-own-mqtt-broker/
+- https://jaimyn.com.au/mqtt-use-acls-multiple-user-accounts/
+- https://www.youtube.com/watch?v=IenXQvOcj54&ab_channel=SteveCope
+- 
+============================================================================================   
+logins:
+  - username: smartboard
+    password: smartboard.123
+anonymous: false
+customize:
+  active: true
+  folder: mosquitto/config
+certfile: /ssl/fullchain.pem
+keyfile: /ssl/privkey.pem
+require_certificate: true
