@@ -1,5 +1,6 @@
 ============================================================================================ 
-Git pull - Configuration
+Git pull - Configuration - https://diy-smarthome.com/how-to-set-up-git-to-version-control-your-home-assistant-configuration/
+                           https://blog.schembri.me/post/syncing-homeassistant-with-github/
 ============================================================================================ 
 deployment_key: []
 deployment_key_protocol: rsa
@@ -44,21 +45,6 @@ logins:
 rights:
   - username: smartboardnew
     database: smartboardnew
-
-
-============================================================================================
-Mosquitto Broker - Configuration
-============================================================================================   
-logins:
-  - username: smartboard
-    password: smartboard.123
-anonymous: false
-customize:
-  active: true
-  folder: mosquitto/config
-certfile: /ssl/fullchain.pem
-keyfile: /ssl/privkey.pem
-require_certificate: true
 
 
 ============================================================================================
