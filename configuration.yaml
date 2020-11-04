@@ -16,7 +16,16 @@ mqtt:
    broker: smartboardneww.duckdns.org
    #port: 1883
    port: 8883
-   certificate: /ssl/fullchain.pem
+   certificate: auto
+   
+   ##tentattivas
+   #certificate: /ssl/certificate.crt
+   #certificate: /ssl/cert.crt
+
+   ##Referencia (nao sei se está correta):
+   # certificate: /ssl/chain.pem
+   # client_key: /ssl/b5dd525b0f-certificate.pem.crt
+   # client_cert: /ssl/b5dd525b0f-private.pem.key
    
 logger:
   default: warning
