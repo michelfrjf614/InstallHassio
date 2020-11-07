@@ -15,6 +15,20 @@ How to execute:
 
 6) Copy de infomations from Git to Hassio / Supervisor -> Mosquitto / MariaDB / Duckdns; ==> See file https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/Tools/configTools
 
-7) Install File editor, Terminal & SSH on "Hassio / Supervisor (for help);"
+7) Install File editor, Terminal & SSH on "Hassio / Supervisor (for help- optional);"
 
 8) sudo curl -L https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/certificates/certificates.sh | bash -s (pode ser o git insira algun cararcter especisl nesse chama, caso tenha esse problema basta colar na url do Browser e depois de copiar vc pode executar)
+
+
+
+if you need, you can use:
+# Init system
+echo "[Info] Run Hass.io"
+systemctl start hassio-supervisor.service
+
+# End system
+echo "[Info] Finish Hass.io"
+systemctl stop hassio-supervisor.service
+
+# Change password of "ubuntu"
+sudo passwd ubuntu
