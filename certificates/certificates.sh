@@ -5,7 +5,16 @@ set -e
 function error { echo -e "[Error] $*"; exit 1; }
 function warn  { echo -e "[Warning] $*"; }
 
+sudo chmod 777 cd /usr/share/hassio/ssl
 cd /usr/share/hassio/ssl
+
+echo -n "Digite o nome do nome dominio duckdns. Exemplo se for NOME_DO_DNS.duckdns.org informar O NOME_DO_DNS"
+read _DNS
+
+echo DNS informado foi $_DNS
+
+cp /usr/share/hassio/addons/data/core_duckdns/letsencrypt/$_DNS.duckdns.org/chain.pem /usr/share/hassio/ssl
+
 
 echo "listener 8884 - protocol websockets use:"
 echo "cafile /ssl/chain.pem"
