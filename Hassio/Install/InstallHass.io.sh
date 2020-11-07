@@ -67,28 +67,6 @@ sudo docker run -d -p 9000:9000 -p 8000:8000 --name portainer --restart always -
 echo ""
 echo ""
 echo ""
-echo "Once the installation is completed go to http://hassio.local:8123/ or http://yourIPaddress:8123/"
-echo "(replace yourIPaddress with your actual IP address) from your web browser to access your new Home Assistant installation."
-
-echo ""
-echo ""
-echo ""
-echo "##[Info] Referencia de erros:"
-echo "##Para imagem docker https://hub.docker.com/_/eclipse-mosquitto"
-echo "##Para problemas de pasta com o parametro -v... https://github.com/eclipse/mosquitto/issues/457"
-echo ""
-echo ""
-echo ""
-echo "##[Info] Para Configuracoes no hassio"
-echo "##https://www.home-assistant.io/docs/mqtt/broker#run-your-own"
-echo "##https://community.home-assistant.io/t/solved-connect-ha-to-mqtt-broker-with-tls-ca-crt/158415"
-
-
-
-
-echo ""
-echo ""
-echo ""
 echo "[Info] Create folders for mosquitto"
 sudo mkdir /usr/share/hassio/share/mosquitto/
 sudo mkdir /usr/share/hassio/share/mosquitto/config/
@@ -100,12 +78,24 @@ sudo chmod 777 /usr/share/hassio/share/mosquitto/config/
 sudo chmod 777 /usr/share/hassio/share/mosquitto/data
 sudo chmod 777 /usr/share/hassio/share/mosquitto/log
 
+
+
+echo ""
+echo ""
+echo ""
+echo "[Info] copy configuration.yaml to homeassistant"
+sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/config.yaml > "/usr/share/hassio/homeassistant/configuration.yaml"
+
+
+
 echo ""
 echo ""
 echo ""
 echo "[Info] File ACL - accesscontrollist"
 sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/accesscontrollist > "/usr/share/hassio/share/mosquitto/config/accesscontrollist"
 sudo chmod 777 /usr/share/hassio/share/mosquitto/config/accesscontrollist
+
+
 
 echo ""
 echo ""
@@ -114,18 +104,38 @@ echo "[Info] Download addMosquitto.conf"
 sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/addMosquitto.conf > "/usr/share/hassio/share/mosquitto/config/addMosquitto.conf"
 sudo chmod 777 /usr/share/hassio/share/mosquitto/config/addMosquitto.conf
 
-echo ""
-echo ""
-echo ""
-echo "[Info] File Password - passwd"
-echo "" > "/share/mosquitto/config/passwd"
-sudo chmod 777 /usr/share/hassio/share/mosquitto/config/passwd
+
 
 echo ""
 echo ""
 echo ""
-echo "[Info] copy configuration.yaml  to homeassistant"
-sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/config.yaml > "/usr/share/hassio/homeassistant/configuration.yaml"
+echo "[Info] File Password - passwd"
+echo "" > "/usr/share/hassio/share/mosquitto/config/passwd"
+sudo chmod 777 /usr/share/hassio/share/mosquitto/config/passwd
+
+
+
+echo ""
+echo ""
+echo "Observaçao liberar as portas 1883, 1884, 8883, 8884, 8123, 9000" no console do 
+echo "Once the installation is completed go to http://hassio.local:8123/ or http://yourIPaddress:8123/"
+echo "(replace yourIPaddress with your actual IP address) from your web browser to access your new Home Assistant installation."
+
+echo ""
+echo ""
+echo ""
+echo "##[Info] Referencia de erros:"
+echo "##Para imagem docker https://hub.docker.com/_/eclipse-mosquitto"
+echo "##Para problemas de pasta com o parametro -v... https://github.com/eclipse/mosquitto/issues/457"
+
+
+echo ""
+echo ""
+echo ""
+echo "##[Info] Para Configuracoes no hassio"
+echo "##https://www.home-assistant.io/docs/mqtt/broker#run-your-own"
+echo "##https://community.home-assistant.io/t/solved-connect-ha-to-mqtt-broker-with-tls-ca-crt/158415"
+
 
 
 
