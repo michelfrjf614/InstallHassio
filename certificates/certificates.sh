@@ -10,11 +10,9 @@ echo TESTE
 sudo chmod 777 /usr/share/hassio/ssl
 cd /usr/share/hassio/ssl
 
-echo -n "Digite o nome do nome dominio duckdns. Exemplo se for NOME_DO_DNS.duckdns.org informar O NOME_DO_DNS: " 
-
-read _DNS
-
-echo DNS informado foi $_DNS
+echo "Digite o nome do nome dominio duckdns. Exemplo se for NOME_DO_DNS.duckdns.org informar O NOME_DO_DNS: " 
+read dns
+echo "o DNS informado foi $dns"
 
 cp /usr/share/hassio/addons/data/core_duckdns/letsencrypt/$_DNS.duckdns.org/chain.pem /usr/share/hassio/ssl
 
