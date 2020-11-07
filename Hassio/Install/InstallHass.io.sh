@@ -78,12 +78,9 @@ echo ""
 echo ""
 echo "[Info] File Password - passwd"
 echo "" > "/share/mosquitto/config/passwd"
-sudo chmod 777 /share/mosquitto/config/passwd
+sudo chmod 777 /usr/share/hassio/share/mosquitto/config/passwd
 echo ""
 echo ""
-
-
-
 
 
 
@@ -92,6 +89,20 @@ echo ""
            sudo docker run -it --name=mosquitto                       -p 1883:1883 -p 1884:1884 -p 8883:8883 -p 8884:8884 -p 9001:9001 -v /mosquitto/:/mosquitto/           -v /mosquitto/log:/mosquitto/log -v /mosquitto/data/:/mosquitto/data/  eclipse-mosquitto
 # Example: sudo docker run -it --name=“mosquitto” –restart on-failure -p 1883:1883 -p 1884:1884 -p 8883:8883 -p 8884:8884 -p 9001:9001 -v /srv/mqtt/config:/mqtt/config:ro  -v /srv/mqtt/log:/mqtt/log       -v /srv/mqtt/data/:/mqtt/data/        eclipse-mosquitto
 # Example: sudo docker run -it --name=mosquitto                       -p 1883:1883 -p 1884:1884 -p 8883:8883 -p 8884:8884 -p 9001:9001 -v mosquitto.conf:/mosquitto/config/mosquitto.conf eclipse-mosquitto
+
+
+# para permnitira a configuracao de usuario e senha
+#--env , -e		Set environment variables
+# docker run -e MYVAR1 --env MYVAR2=foo --env-file ./env.list ubuntu bash
+#export VAR1=value1
+#export VAR2=value2
+#$ docker run --env VAR1 --env VAR2 ubuntu env | grep VAR
+#VAR1=value1
+#VAR2=value2
+
+
+sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/config.yaml > "/usr/share/hassio/homeassistant/configuration.yaml"
+
 
 echo ""
 echo ""
