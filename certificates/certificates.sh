@@ -20,21 +20,21 @@ echo "keyfile /ssl/privkey.pem"
 echo ""
 
 echo "Extrair .CRT de .PEM: fullchain.PEM ==> cert.CRT"
-echo "openssl crl2pkcs7 -nocrl -certfile fullchain.pem | openssl pkcs7 -print_certs -out cert.crt"
+sudo openssl crl2pkcs7 -nocrl -certfile fullchain.pem | openssl pkcs7 -print_certs -out cert.crt
 echo ""
 
 
 echo "Firmwware use:"
 echo "chain.pem     ==> ca.der"
-openssl x509 -outform der -in     chain.pem -out ca.der
+sudo openssl x509 -outform der -in     chain.pem -out ca.der
 echo ""
 
 echo "fullchain.pem ==> cert.der"
-openssl x509 -outform der -in fullchain.pem -out cert.der
+sudo openssl x509 -outform der -in fullchain.pem -out cert.der
 echo ""
 
 echo "privkey.pem   ==> private.der"
-openssl x509 -outform der -in   privkey.pem -out private.der
+sudo openssl x509 -outform der -in   privkey.pem -out private.der
 echo ""
 
 #certificate.crt
