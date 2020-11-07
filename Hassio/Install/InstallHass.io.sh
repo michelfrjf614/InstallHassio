@@ -85,6 +85,50 @@ echo "##https://community.home-assistant.io/t/solved-connect-ha-to-mqtt-broker-w
 
 
 
+
+echo ""
+echo ""
+echo ""
+echo "[Info] Create folders for mosquitto"
+sudo mkdir /usr/share/hassio/share/mosquitto/
+sudo mkdir /usr/share/hassio/share/mosquitto/config/
+sudo mkdir /usr/share/hassio/share/mosquitto/data
+sudo mkdir /usr/share/hassio/share/mosquitto/log
+
+sudo chmod 777 /usr/share/hassio/share/mosquitto/
+sudo chmod 777 /usr/share/hassio/share/mosquitto/config/
+sudo chmod 777 /usr/share/hassio/share/mosquitto/data
+sudo chmod 777 /usr/share/hassio/share/mosquitto/log
+
+echo ""
+echo ""
+echo ""
+echo "[Info] File ACL - accesscontrollist"
+sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/accesscontrollist > "/usr/share/hassio/share/mosquitto/config/accesscontrollist"
+sudo chmod 777 /usr/share/hassio/share/mosquitto/config/accesscontrollist
+
+echo ""
+echo ""
+echo ""
+echo "[Info] Download addMosquitto.conf"
+sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/addMosquitto.conf > "/usr/share/hassio/share/mosquitto/config/addMosquitto.conf"
+sudo chmod 777 /usr/share/hassio/share/mosquitto/config/addMosquitto.conf
+
+echo ""
+echo ""
+echo ""
+echo "[Info] File Password - passwd"
+echo "" > "/share/mosquitto/config/passwd"
+sudo chmod 777 /usr/share/hassio/share/mosquitto/config/passwd
+
+echo ""
+echo ""
+echo ""
+echo "[Info] copy configuration.yaml  to homeassistant"
+sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/config.yaml > "/usr/share/hassio/homeassistant/configuration.yaml"
+
+
+
 #echo ""
 #echo ""
 #echo ""
