@@ -5,12 +5,14 @@ set -e
 function error { echo -e "[Error] $*"; exit 1; }
 function warn  { echo -e "[Warning] $*"; }
 
-echo TESTE
+echo “Qual o nome de uma de suas músicas favoritas?”
+read nome_musica;
+echo “Você gosta de ouvir $nome_musica!”
 
 sudo chmod 777 /usr/share/hassio/ssl
 cd /usr/share/hassio/ssl
 
-echo "Digite o nome do nome dominio duckdns. Exemplo se for NOME_DO_DNS.duckdns.org informar O NOME_DO_DNS: " 
+echo "Digite o nome do nome dominio duckdns: " 
 read dns
 echo "o DNS informado foi $dns"
 
