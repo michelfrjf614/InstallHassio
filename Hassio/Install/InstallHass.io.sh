@@ -8,8 +8,15 @@ function warn  { echo -e "[Warning] $*"; }
 DIR_ME="ubuntu"
 DIR_HASSIO=/home/ubuntu/docker/hassio
 
+echo ""
+echo ""
+echo ""
+echo "[Update] update SO"
 sudo apt-get update
 
+echo ""
+echo ""
+echo ""
 echo "[Info] Install dependencies: bash jq curl avahi-daemon dbus software-properties-common apparmor-utils"
 #sudo snap install jq
 sudo apt-get install bash jq curl avahi-daemon dbus software-properties-common apparmor-utils
@@ -49,11 +56,11 @@ echo ""
 echo ""
 echo "[Info] Install Home Assistant from latest script from Home assistant GitHub (working as of Sept. 2020)"
 sudo curl -sL https://raw.githubusercontent.com/home-assistant/supervised-installer/master/installer.sh | bash -s
-echo ""
-echo ""
-echo ""
 
 
+echo ""
+echo ""
+echo ""
 echo "[Info] Create folders for mosquitto"
 sudo mkdir /usr/share/hassio/share/mosquitto/
 sudo mkdir /usr/share/hassio/share/mosquitto/config/
@@ -64,31 +71,35 @@ sudo chmod 777 /usr/share/hassio/share/mosquitto/
 sudo chmod 777 /usr/share/hassio/share/mosquitto/config/
 sudo chmod 777 /usr/share/hassio/share/mosquitto/data
 sudo chmod 777 /usr/share/hassio/share/mosquitto/log
+
+echo ""
 echo ""
 echo ""
 echo "[Info] File ACL - accesscontrollist"
 sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/accesscontrollist > "/usr/share/hassio/share/mosquitto/config/accesscontrollist"
 sudo chmod 777 /usr/share/hassio/share/mosquitto/config/accesscontrollist
+
+echo ""
 echo ""
 echo ""
 echo "[Info] Download addMosquitto.conf"
 sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/addMosquitto.conf > "/usr/share/hassio/share/mosquitto/config/addMosquitto.conf"
 sudo chmod 777 /usr/share/hassio/share/mosquitto/config/addMosquitto.conf
+
+echo ""
 echo ""
 echo ""
 echo "[Info] File Password - passwd"
 echo "" > "/share/mosquitto/config/passwd"
 sudo chmod 777 /usr/share/hassio/share/mosquitto/config/passwd
+
 echo ""
 echo ""
-
-
-#echo "[Info] Run mosquitto on docker "
+echo ""
+echo "[Info] Run mosquitto on docker "
            sudo docker run -it --name=mosquitto                       -p 1883:1883 -p 1884:1884 -p 8883:8883 -p 8884:8884 -p 9001:9001 -v /mosquitto/:/mosquitto/           -v /mosquitto/log:/mosquitto/log -v /mosquitto/data/:/mosquitto/data/  eclipse-mosquitto
 # Example: sudo docker run -it --name=“mosquitto” –restart on-failure -p 1883:1883 -p 1884:1884 -p 8883:8883 -p 8884:8884 -p 9001:9001 -v /srv/mqtt/config:/mqtt/config:ro  -v /srv/mqtt/log:/mqtt/log       -v /srv/mqtt/data/:/mqtt/data/        eclipse-mosquitto
 # Example: sudo docker run -it --name=mosquitto                       -p 1883:1883 -p 1884:1884 -p 8883:8883 -p 8884:8884 -p 9001:9001 -v mosquitto.conf:/mosquitto/config/mosquitto.conf eclipse-mosquitto
-
-
 # para permnitira a configuracao de usuario e senha
 #--env , -e		Set environment variables
 # docker run -e MYVAR1 --env MYVAR2=foo --env-file ./env.list ubuntu bash
@@ -99,6 +110,11 @@ echo ""
 #VAR2=value2
 
 
+
+echo ""
+echo ""
+echo ""
+echo "[Info] Run mosquitto on docker "
 sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/config.yaml > "/usr/share/hassio/homeassistant/configuration.yaml"
 
 
