@@ -66,19 +66,31 @@ sudo chmod 777 /usr/share/hassio/share/mosquitto/data
 sudo chmod 777 /usr/share/hassio/share/mosquitto/log
 echo ""
 echo ""
-echo "[Info] Download addMosquitto.conf"
-sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/addMosquitto.conf > "/usr/share/hassio/share/mosquitto/config/addMosquitto.conf"
-sudo chmod 777 /usr/share/hassio/share/mosquitto/config/addMosquitto.conf
-echo ""
-echo ""
 echo "[Info] File ACL - accesscontrollist"
 sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/accesscontrollist > "/usr/share/hassio/share/mosquitto/config/accesscontrollist"
 sudo chmod 777 /usr/share/hassio/share/mosquitto/config/accesscontrollist
 echo ""
 echo ""
+echo "[Info] Download addMosquitto.conf"
+sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/addMosquitto.conf > "/usr/share/hassio/share/mosquitto/config/addMosquitto.conf"
+sudo chmod 777 /usr/share/hassio/share/mosquitto/config/addMosquitto.conf
+echo ""
+echo ""
+echo "[Info] File Password - passwd"
+echo "" > "/share/mosquitto/config/passwd"
+sudo chmod 777 /share/mosquitto/config/passwd
+echo ""
+echo ""
+
+
+
+
+
+
+
 #echo "[Info] Run mosquitto on docker "
-           sudo docker run -it --name=mosquitto -p 1883:1883 -p 1884:1884 -p 8883:8883 -p 8884:8884 -p 9001:9001 -v /mosquitto/:/mosquitto/ -v /mosquitto/log:/mosquitto/log -v /mosquitto/data/:/mosquitto/data/  eclipse-mosquitto
-# Example: sudo docker run -it --name=“mosquitto” –restart on-failure -p 1883:1883 -p 1884:1884 -p 8883:8883 -p 8884:8884 -p 9001:9001 -v /srv/mqtt/config:/mqtt/config:ro  -v /srv/mqtt/log:/mqtt/log  -v /srv/mqtt/data/:/mqtt/data/ eclipse-mosquitto
+           sudo docker run -it --name=mosquitto                       -p 1883:1883 -p 1884:1884 -p 8883:8883 -p 8884:8884 -p 9001:9001 -v /mosquitto/:/mosquitto/           -v /mosquitto/log:/mosquitto/log -v /mosquitto/data/:/mosquitto/data/  eclipse-mosquitto
+# Example: sudo docker run -it --name=“mosquitto” –restart on-failure -p 1883:1883 -p 1884:1884 -p 8883:8883 -p 8884:8884 -p 9001:9001 -v /srv/mqtt/config:/mqtt/config:ro  -v /srv/mqtt/log:/mqtt/log       -v /srv/mqtt/data/:/mqtt/data/        eclipse-mosquitto
 # Example: sudo docker run -it --name=mosquitto                       -p 1883:1883 -p 1884:1884 -p 8883:8883 -p 8884:8884 -p 9001:9001 -v mosquitto.conf:/mosquitto/config/mosquitto.conf eclipse-mosquitto
 
 echo ""
@@ -102,17 +114,5 @@ echo ""
 #echo "https://community.home-assistant.io/t/solved-connect-ha-to-mqtt-broker-with-tls-ca-crt/158415"
 #echo ""
 #echo ""
-#echo "[Info] Para certificados"
-#echo "http://www.steves-internet-guide.com/mosquitto-tls/"
-#echo "https://www.youtube.com/watch?v=f3f4h7q6x5g"
-#echo "https://www.youtube.com/watch?v=zPT8LFWqazM"
-#echo ""
-#echo ""
 #echo "Once the installation is completed go to http://hassio.local:8123/ or http://yourIPaddress:8123/"
 #echo "(replace yourIPaddress with your actual IP address) from your web browser to access your new Home Assistant installation."
-
-
-
-echo "the certificate files must have ".crt" as the file ending and you must run"
-echo "Extrair .crt de .pem:"
-echo "openssl crl2pkcs7 -nocrl -certfile cert.pem | openssl pkcs7 -print_certs -out cert.crt"
