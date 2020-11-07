@@ -32,3 +32,6 @@ systemctl stop hassio-supervisor.service
 
 # Change password of "ubuntu"
 sudo passwd ubuntu
+
+# Reset user and password of Home assistent
+sudo rmdir /usr/share/hassio/homeassistant/.storage
