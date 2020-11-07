@@ -61,12 +61,12 @@ git_prune: false
 repository: 'https://github.com/michelfrjf614/InstallHassio.git'
 auto_restart: false
 restart_ignore:
-- ui-lovelace.yaml
-- .gitignore
-- exampledirectory/
+  - ui-lovelace.yaml
+  - .gitignore
+  - exampledirectory/
 repeat:
-active: false
-interval: 300
+  active: false
+  interval: 300
 
 
 ============================================================================================
