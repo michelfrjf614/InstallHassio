@@ -91,8 +91,16 @@ sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main
 echo ""
 echo ""
 echo ""
+echo "[Info] copy light.yaml to homeassistant"
+sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/light.yaml > "/usr/share/hassio/homeassistant/light.yaml"
+
+
+
+echo ""
+echo ""
+echo ""
 echo "[Info] File ACL - accesscontrollist"
-sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/accesscontrollist > "/usr/share/hassio/share/mosquitto/config/accesscontrollist"
+sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Mosquitto/Config/accesscontrollist > "/usr/share/hassio/share/mosquitto/config/accesscontrollist"
 sudo chmod 777 /usr/share/hassio/share/mosquitto/config/accesscontrollist
 
 
@@ -101,7 +109,7 @@ echo ""
 echo ""
 echo ""
 echo "[Info] Download addMosquitto.conf"
-sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/addMosquitto.conf > "/usr/share/hassio/share/mosquitto/config/addMosquitto.conf"
+sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Mosquitto/Config/addMosquitto.conf > "/usr/share/hassio/share/mosquitto/config/addMosquitto.conf"
 sudo chmod 777 /usr/share/hassio/share/mosquitto/config/addMosquitto.conf
 
 
