@@ -5,6 +5,8 @@ set -e
 function error { echo -e "[Error] $*"; exit 1; }
 function warn  { echo -e "[Warning] $*"; }
 
+echo TESTE
+
 sudo chmod 777 /usr/share/hassio/ssl
 cd /usr/share/hassio/ssl
 
