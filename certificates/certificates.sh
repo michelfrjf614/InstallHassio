@@ -8,8 +8,7 @@ function warn  { echo -e "[Warning] $*"; }
 sudo chmod 777 /usr/share/hassio/ssl
 cd /usr/share/hassio/ssl
 
-echo -n "Digite o nome do nome dominio duckdns. Exemplo se for NOME_DO_DNS.duckdns.org informar O NOME_DO_DNS"
-read _DNS
+echo -n "Digite o nome do nome dominio duckdns. Exemplo se for NOME_DO_DNS.duckdns.org informar O NOME_DO_DNS". read _DNS
 
 echo DNS informado foi $_DNS
 
