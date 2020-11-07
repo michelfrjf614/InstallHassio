@@ -7,7 +7,7 @@ How to execute:
 
 2) Configurar as portas 9000, 8884, 8123, 1884, 8883, 1883, 81 para sereme liberadas no link https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#SecurityGroups:
 
-3) sudo curl -L https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/Install/InstallHass.io.sh | bash -s (pode ser o git insira algun cararcter especisl nesse chama, caso tenha esse problema basta colar na url do Browser e depois de copiar vc pode executar)
+3) sudo curl -L https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/Install/InstallHass.io.sh | bash -s (pode ser o git insira alguns cararcteres especiais nesse url, caso tenha esse problema basta colar na url do Browser e depois de copiar vc pode executar)
 
 4) Criar um dominio do duckdns
  
@@ -17,7 +17,11 @@ How to execute:
 
 7) Install File editor, Terminal & SSH on "Hassio / Supervisor (for help- optional);"
 
-8) sudo curl -L https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/certificates/certificates.sh | bash -s (pode ser o git insira algun cararcter especisl nesse chama, caso tenha esse problema basta colar na url do Browser e depois de copiar vc pode executar)
+8)  Update your param broker on configuration.yaml
+       mqtt:
+          broker: testexpto.duckdns.org
+
+9) sudo curl -L https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/certificates/certificates.sh | bash -s (pode ser o git insira alguns cararcteres especiais nesse url, caso tenha esse problema basta colar na url do Browser e depois de copiar vc pode executar)
 
 
 
