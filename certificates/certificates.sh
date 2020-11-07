@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+set -e
+
+function error { echo -e "[Error] $*"; exit 1; }
+function warn  { echo -e "[Warning] $*"; }
+
 cd /usr/share/hassio/ssl
 
 echo "listener 8884 - protocol websockets use:"
