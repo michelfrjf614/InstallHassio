@@ -1,0 +1,5 @@
+echo "the certificate files must have ".crt" as the file ending and you must run"
+echo "Extrair .crt de .pem:"
+
+cd /usr/share/hassio/ssl
+echo "openssl crl2pkcs7 -nocrl -certfile cert.pem | openssl pkcs7 -print_certs -out cert.crt"
