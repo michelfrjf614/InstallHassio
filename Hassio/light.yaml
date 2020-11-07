@@ -1,0 +1,15 @@
+-   platform: mqtt
+    name: 'Painel Borne 1'
+    state_topic: '/Painel7610F9/borne1Out'
+    command_topic: '/Painel7610F9/borne1In'
+    payload_on: 1
+    payload_off: 0
+    optimistic: false
+    
+-   platform: mqtt
+    name: 'Painel Borne 2'
+    state_topic: '/Painel7610F9/borne2Out'
+    command_topic: '/Painel7610F9/borne2In'
+    payload_on: 1
+    payload_off: 0
+    optimistic: false
