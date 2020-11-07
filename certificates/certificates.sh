@@ -32,7 +32,6 @@ echo "privkey.pem   ==> private.der"
 openssl x509 -outform der -in   privkey.pem -out private.der
 echo ""
 
-
 #certificate.crt
 #cert.csr
 #cert.key
