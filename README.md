@@ -1,8 +1,3 @@
-# InstallHassio
-Bashes for Install
-
-How to execute:
-
 # A - Intalls Ubuntu on EC2 by AWS
 
 1. You need to follow this tutorial (https://aws.amazon.com/pt/blogs/iot/how-to-bridge-mosquitto-mqtt-broker-to-aws-iot/)
@@ -29,7 +24,7 @@ How to execute:
 
 
 
-# C - Built the certification to Mosquittto and firmwware ESP8266
+# C - Built the certification to Mosquittto and firmware ESP8266
 
 1. sudo curl -L https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/certificates/certificates.sh | bash -s 
 
