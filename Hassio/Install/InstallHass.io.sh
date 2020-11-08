@@ -127,8 +127,8 @@ sudo chmod 777 /usr/share/hassio/ssl
 
 echo ""
 echo ""
-info "Once the installation is completed go to http://hassio.local:8123/ or http://yourIPaddress:8123/ in the future http://$answer.duckdns.org/"
-warn "(replace yourIPaddress with your actual IP address) from your web browser to access your new Home Assistant installation."
+echo "Once the installation is completed go to http://hassio.local:8123/ or http://yourIPaddress:8123/ in the future http://$answer.duckdns.org/"
+echo "(replace yourIPaddress with your actual IP address) from your web browser to access your new Home Assistant installation."
 
 echo ""
 echo ""
