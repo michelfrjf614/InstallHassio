@@ -10,23 +10,20 @@ DIR_HASSIO=/home/ubuntu/docker/hassio
 
 echo ""
 echo ""
-echo ""
 echo "[Update] update SO"
 sudo apt-get -y update
 
 echo ""
 echo ""
-echo ""
 echo "[Info] Install dependencies: bash jq curl avahi-daemon dbus software-properties-common apparmor-utils"
 #sudo snap install jq
 sudo apt-get -y install bash jq curl avahi-daemon dbus software-properties-common apparmor-utils
-echo ""
+
 echo ""
 echo ""
 echo "[Info] Install apt-transport-https ca-certificates curl software-properties-common -y"
 sudo apt-get -y install apt-transport-https ca-certificates curl software-properties-common -y
 
-echo ""
 echo ""
 echo ""
 echo "[Info] Install Docker Ubuntu"
@@ -40,11 +37,9 @@ sudo su
 
 echo ""
 echo ""
-echo ""
 #echo "[Info] Install Home Assistant - from https://github.com/icanfixitweb/Hassio-Virtual-Machine/tree/master/hassio_install_script"
 #sudo curl -sL https://raw.githubusercontent.com/icanfixitweb/Hassio-Virtual-Machine/master/hassio_install_script/original_script/installer.sh | bash -s -- -d $DIR_HASSIO
 
-echo ""
 echo ""
 echo ""
 echo "[Info] Install network-manager"
@@ -52,11 +47,9 @@ sudo apt-get -y install network-manager
 
 echo ""
 echo ""
-echo ""
 echo "[Info] Install Home Assistant from latest script from Home assistant GitHub (working as of Sept. 2020)"
 sudo curl -sL https://raw.githubusercontent.com/home-assistant/supervised-installer/master/installer.sh | bash -s
 
-echo ""
 echo ""
 echo ""
 echo "Run the Portainerio" 
@@ -64,23 +57,28 @@ sudo docker run -d -p 9000:9000 -p 8000:8000 --name portainer --restart always -
 
 echo ""
 echo ""
-echo ""
-echo "[Info] Aguardando 1 minuto para configurar todo o mosquitto"
-sleep 10
-#echo "[Info] falta 50 segundos"
-#sleep 10
-echo "[Info] falta 40 segundos"
-sleep 10
+echo "[Info] Aguardando 40 segundos para configurar todo o mosquitto"
+# sleep 5
+# echo "[Info] falta 45 segundos"
+# sleep 5
+# echo "[Info] falta 40 segundos"
+sleep 5
+echo "[Info] falta 35 segundos"
+sleep 5
 echo "[Info] falta 30 segundos"
-sleep 10
+sleep 5
+echo "[Info] falta 25 segundos"
+sleep 5
 echo "[Info] falta 20 segundos"
-sleep 10
+sleep 5
+echo "[Info] falta 15 segundos"
+sleep 5
 echo "[Info] falta 10 segundos"
-sleep 10
-echo "[Info] passou 1 minuto"
+sleep 5
+echo "[Info] falta 5 segundos"
+sleep 5
+echo "[Info] passou 40 segundo"
 
-
-echo ""
 echo ""
 echo ""
 echo "[Info] Create folders for mosquitto"
@@ -95,24 +93,17 @@ sudo chmod 777 /usr/share/hassio/share/mosquitto/data
 sudo chmod 777 /usr/share/hassio/share/mosquitto/log
 
 
-
-echo ""
 echo ""
 echo ""
 echo "[Info] copy configuration.yaml to homeassistant"
 sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/config.yaml > "/usr/share/hassio/homeassistant/configuration.yaml"
 
 
-
-echo ""
 echo ""
 echo ""
 echo "[Info] copy light.yaml to homeassistant"
 sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/light.yaml > "/usr/share/hassio/homeassistant/light.yaml"
 
-
-
-echo ""
 echo ""
 echo ""
 echo "[Info] File ACL - accesscontrollist"
@@ -120,8 +111,6 @@ sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main
 sudo chmod 777 /usr/share/hassio/share/mosquitto/config/accesscontrollist
 
 
-
-echo ""
 echo ""
 echo ""
 echo "[Info] Download addMosquitto.conf"
@@ -129,16 +118,12 @@ sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main
 sudo chmod 777 /usr/share/hassio/share/mosquitto/config/addMosquitto.conf
 
 
-
-echo ""
 echo ""
 echo ""
 echo "[Info] File Password - passwd"
 echo "" > "/usr/share/hassio/share/mosquitto/config/passwd"
 sudo chmod 777 /usr/share/hassio/share/mosquitto/config/passwd
-
 sudo chmod 777 /usr/share/hassio/ssl
-
 
 echo ""
 echo ""
@@ -148,21 +133,15 @@ echo "(replace yourIPaddress with your actual IP address) from your web browser 
 
 echo ""
 echo ""
-echo ""
 echo "##[Info] Referencia de erros:"
 echo "##Para imagem docker https://hub.docker.com/_/eclipse-mosquitto"
 echo "##Para problemas de pasta com o parametro -v... https://github.com/eclipse/mosquitto/issues/457"
 
-
-echo ""
 echo ""
 echo ""
 echo "##[Info] Para Configuracoes no hassio"
 echo "##https://www.home-assistant.io/docs/mqtt/broker#run-your-own"
 echo "##https://community.home-assistant.io/t/solved-connect-ha-to-mqtt-broker-with-tls-ca-crt/158415"
-
-
-
 
 #echo ""
 #echo ""
@@ -174,6 +153,7 @@ echo "##https://community.home-assistant.io/t/solved-connect-ha-to-mqtt-broker-w
 # para permnitira a configuracao de usuario e senha
 #--env , -e		Set environment variables
 # docker run -e MYVAR1 --env MYVAR2=foo --env-file ./env.list ubuntu bash
+
 #export VAR1=value1
 #export VAR2=value2
 #$ docker run --env VAR1 --env VAR2 ubuntu env | grep VAR
