@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-set -e
-
-function error { echo -e "[Error] $*"; exit 1; }
-function warn  { echo -e "[Warning] $*"; }
-
 DIR_ME="ubuntu"
 DIR_HASSIO=/home/ubuntu/docker/hassio
 
