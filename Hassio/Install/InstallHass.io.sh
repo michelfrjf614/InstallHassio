@@ -8,6 +8,11 @@ function warn  { echo -e "[Warning] $*"; }
 DIR_ME="ubuntu"
 DIR_HASSIO=/home/ubuntu/docker/hassio
 
+
+# info "Digite o nome do nome dominio duckdns. Exemplo se for NOME_DO_DNS.duckdns.org informar O NOME_DO_DNS: "
+# read answer < /dev/tty
+read -p "Digite o nome do nome dominio duckdns. Exemplo se for NOME_DO_DNS.duckdns.org informar O NOME_DO_DNS: " answer
+
 echo ""
 echo ""
 echo "[Update] update SO"
@@ -91,13 +96,19 @@ sudo chmod 777 /usr/share/hassio/share/mosquitto/log
 echo ""
 echo ""
 echo "[Info] copy configuration.yaml to homeassistant"
-sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/config.yaml > "/usr/share/hassio/homeassistant/configuration.yaml"
+sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/configuration.yaml > "/usr/share/hassio/homeassistant/configuration.yaml"
+sed -i "s/smartboardneww/$answer/" /usr/share/hassio/homeassistant/configuration.yaml
 
 
 echo ""
 echo ""
 echo "[Info] copy light.yaml to homeassistant"
 sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/light.yaml > "/usr/share/hassio/homeassistant/light.yaml"
+sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/groups.yaml > "/usr/share/hassio/homeassistant/groups.yaml"
+sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/automations.yaml > "/usr/share/hassio/homeassistant/automations.yaml"
+sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/scripts.yaml > "/usr/share/hassio/homeassistant/scripts.yaml"
+sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/scenes.yaml > "/usr/share/hassio/homeassistant/scenes.yaml"
+
 
 echo ""
 echo ""
@@ -122,9 +133,8 @@ sudo chmod 777 /usr/share/hassio/ssl
 
 echo ""
 echo ""
-echo "Observaçao liberar as portas 1883, 1884, 8883, 8884, 8123, 9000" no console do 
-echo "Once the installation is completed go to http://hassio.local:8123/ or http://yourIPaddress:8123/"
-echo "(replace yourIPaddress with your actual IP address) from your web browser to access your new Home Assistant installation."
+info "Once the installation is completed go to http://hassio.local:8123/ or http://yourIPaddress:8123/ in the future http://$answer.duckdns.org/"
+warn "(replace yourIPaddress with your actual IP address) from your web browser to access your new Home Assistant installation."
 
 echo ""
 echo ""
