@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
 
-echo “Qual o nome de uma de suas músicas favoritas?”
-read nome_musica;
-echo “Você gosta de ouvir $nome_musica!”
-
-
+echo “Baixando Shell”
 https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/certificates/certificates.sh > /usr/share/hassio/share/mosquitto/certificatesFulll.sh
 
+
+echo “Execuntando Shell”
 bash /usr/share/hassio/share/mosquitto/certificatesFulll.sh
