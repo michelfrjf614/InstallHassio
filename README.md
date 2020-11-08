@@ -12,21 +12,21 @@
 # B - Intalls HASSIO on Ubuntu and config tools from HASSIO
 
 1. Execute: **sudo curl -L https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/Install/InstallHass.io.sh | bash -s**
-   - Durant the execution im input domain from duckdns;
+   - Durant the execution im input domain from duckdns
 
-2. Uodate domain on duckdns **https://www.duckdns.org/** with the IP by EC2 from AWS (ipAWS);
+2. Uodate domain on duckdns **https://www.duckdns.org/** with the IP by EC2 from AWS (ipAWS)
 
-3. Open ipAWS:8123 and on menu "Hassio / Supervisor" install Mosquitto, MariaDB, Duckdns;
+3. Open ipAWS:8123 and on menu "Hassio / Supervisor" install Mosquitto, MariaDB, Duckdns
 
-4. Copy the infomations from git to Hassio / Supervisor -> Mosquitto / MariaDB / Duckdns -> Con figuration. Get the information in the link **https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/Tools/configTools**
+4. Copy the infomations from git to Hassio / Supervisor -> Mosquitto / MariaDB / Duckdns -> Con figuration. Get the information in the link **https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/Tools/configTools** 
 
-5. Install the tools (this is optional) File editor, Terminal & SSH on "Hassio / Supervisor;
+5. Install the tools (this is optional) File editor, Terminal & SSH on "Hassio / Supervisor
 
 
 
 # C - Built the certification to Mosquittto and firmware ESP8266
 
-1. sudo curl -L https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/certificates/certificates.sh | bash -s 
+1. sudo curl -L https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/certificates/certificates.sh | bash -s
 
 
 
