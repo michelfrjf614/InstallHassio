@@ -7,6 +7,8 @@ sudo cp /usr/share/hassio/addons/data/core_duckdns/letsencrypt/"$answer".duckdns
 
 cd /usr/share/hassio/ssl
 
+
+echo "Náo precisamos dos certificados para as portas a seguir:"
 echo "listener 8884 - protocol websockets use:"
 echo "cafile /ssl/chain.pem"
 echo "certfile /ssl/cert.pem"
@@ -19,24 +21,27 @@ echo "certfile /ssl/cert.crt"
 echo "keyfile /ssl/privkey.pem"
 echo ""
 
-echo "Extrair .CRT de .PEM: fullchain.PEM ==> cert.CRT"
+echo "#####################################################################################"
+
+echo "Extrair .CRT de .PEM:   fullchain.PEM ==> cert.CRT"
 sudo openssl crl2pkcs7 -nocrl -certfile fullchain.pem | openssl pkcs7 -print_certs -out cert.crt
 echo ""
 
 
 echo "Firmwware use:"
-echo "chain.pem     ==> ca.der"
+echo "Extrair .DER de .PEM:  chain.pem     ==> ca.der"
 sudo openssl x509 -outform der -in chain.pem -out ca.der
 echo ""
 
-echo "fullchain.pem ==> cert.der"
+echo "Extrair .DER de .PEM:  fullchain.pem ==> cert.der"
 sudo openssl x509 -outform der -in fullchain.pem -out cert.der
 echo ""
 
-echo "privkey.pem   ==> private.der"
+echo "Extrair .DER de .PEM:  privkey.pem   ==> private.der"
 sudo openssl x509 -outform der -in privkey.pem -out private.der
 echo ""
 
+echo ""
 
 #certificate.crt
 #cert.csr
