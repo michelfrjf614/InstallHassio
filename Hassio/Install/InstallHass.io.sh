@@ -66,7 +66,19 @@ echo ""
 echo ""
 echo ""
 echo "[Info] Aguardando 1 minuto para configurar todo o mosquitto"
-sleep 60
+sleep 10
+#echo "[Info] falta 50 segundos"
+#sleep 10
+echo "[Info] falta 40 segundos"
+sleep 10
+echo "[Info] falta 30 segundos"
+sleep 10
+echo "[Info] falta 20 segundos"
+sleep 10
+echo "[Info] falta 10 segundos"
+sleep 10
+echo "[Info] passou 1 minuto"
+
 
 echo ""
 echo ""
