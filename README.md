@@ -21,7 +21,15 @@ How to execute:
        mqtt:
           broker: testexpto.duckdns.org
 
-9) sudo curl -L https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/certificates/certificates.sh | bash -s (pode ser o git insira alguns cararcteres especiais nesse url, caso tenha esse problema basta colar na url do Browser e depois de copiar vc pode executar)
+
+
+9) copy file chain.pem:
+
+set <o nome do DNS configurado no duckdns>
+cp /usr/share/hassio/addons/data/core_duckdns/letsencrypt/$1.duckdns.org/chain.pem /usr/share/hassio/ssl
+
+
+10) sudo curl -L https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/certificates/certificates.sh | bash -s (pode ser o git insira alguns cararcteres especiais nesse url, caso tenha esse problema basta colar na url do Browser e depois de copiar vc pode executar)
 
 
 
