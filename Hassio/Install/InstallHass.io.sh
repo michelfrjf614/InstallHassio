@@ -51,15 +51,11 @@ sudo docker run -d -p 9000:9000 -p 8000:8000 --name portainer --restart always -
 
 echo ""
 echo ""
-echo "[Info] Aguardando 40 segundos para configurar todo o mosquitto"
+echo "[Info] Aguardando 30 segundos para configurar todo o mosquitto"
 # sleep 5
-# echo "[Info] falta 45 segundos"
+# echo "[Info] falta 35 segundos"
 # sleep 5
-# echo "[Info] falta 40 segundos"
-sleep 5
-echo "[Info] falta 35 segundos"
-sleep 5
-echo "[Info] falta 30 segundos"
+# echo "[Info] falta 30 segundos"
 sleep 5
 echo "[Info] falta 25 segundos"
 sleep 5
@@ -91,7 +87,7 @@ echo ""
 echo ""
 echo "[Info] copy configuration.yaml to homeassistant"
 sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/configuration.yaml > "/usr/share/hassio/homeassistant/configuration.yaml"
-sed -i "s/smartboardneww/$answer/" /usr/share/hassio/homeassistant/configuration.yaml
+#sed -i "s/smartboardneww/$answer/" /usr/share/hassio/homeassistant/configuration.yaml
 
 
 echo ""
