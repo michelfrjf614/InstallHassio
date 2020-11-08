@@ -12,6 +12,7 @@ echo "Digite o nome do nome dominio duckdns: "
 read dns
 echo "o DNS informado foi $dns"
 
+echo "Copinado arquivo chain.pem" 
 cp /usr/share/hassio/addons/data/core_duckdns/letsencrypt/$_DNS.duckdns.org/chain.pem /usr/share/hassio/ssl
 
 
