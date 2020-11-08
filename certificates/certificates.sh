@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-info "Do you want to proceed with that? [N/y] "
+info "Digite o nome do nome dominio duckdns. Exemplo se for NOME_DO_DNS.duckdns.org informar O NOME_DO_DNS: "
 read answer < /dev/tty
 
 cp /usr/share/hassio/addons/data/core_duckdns/letsencrypt/"$answer".duckdns.org/chain.pem /usr/share/hassio/ssl
