@@ -5,37 +5,37 @@ read answer < /dev/tty
 
 cp /usr/share/hassio/addons/data/core_duckdns/letsencrypt/"$answer".duckdns.org/chain.pem /usr/share/hassio/ssl
 
-cd /usr/share/hassio/ssl
+# cd /usr/share/hassio/ssl
 
-echo "listener 8884 - protocol websockets use:"
-echo "cafile /ssl/chain.pem"
-echo "certfile /ssl/cert.pem"
-echo "keyfile /ssl/privkey.pem"
-echo ""
+# echo "listener 8884 - protocol websockets use:"
+# echo "cafile /ssl/chain.pem"
+# echo "certfile /ssl/cert.pem"
+# echo "keyfile /ssl/privkey.pem"
+# echo ""
 
-echo "listener 8883 - protocol mqtt use:"
-echo "cafile /ssl/chain.pem"
-echo "certfile /ssl/cert.crt"
-echo "keyfile /ssl/privkey.pem"
-echo ""
+# echo "listener 8883 - protocol mqtt use:"
+# echo "cafile /ssl/chain.pem"
+# echo "certfile /ssl/cert.crt"
+# echo "keyfile /ssl/privkey.pem"
+# echo ""
 
-echo "Extrair .CRT de .PEM: fullchain.PEM ==> cert.CRT"
-sudo openssl crl2pkcs7 -nocrl -certfile fullchain.pem | openssl pkcs7 -print_certs -out cert.crt
-echo ""
+# echo "Extrair .CRT de .PEM: fullchain.PEM ==> cert.CRT"
+# sudo openssl crl2pkcs7 -nocrl -certfile fullchain.pem | openssl pkcs7 -print_certs -out cert.crt
+# echo ""
 
 
-echo "Firmwware use:"
-echo "chain.pem     ==> ca.der"
-sudo openssl x509 -outform der -in     chain.pem -out ca.der
-echo ""
+# echo "Firmwware use:"
+# echo "chain.pem     ==> ca.der"
+# sudo openssl x509 -outform der -in     chain.pem -out ca.der
+# echo ""
 
-echo "fullchain.pem ==> cert.der"
-sudo openssl x509 -outform der -in fullchain.pem -out cert.der
-echo ""
+# echo "fullchain.pem ==> cert.der"
+# sudo openssl x509 -outform der -in fullchain.pem -out cert.der
+# echo ""
 
-echo "privkey.pem   ==> private.der"
-sudo openssl x509 -outform der -in   privkey.pem -out private.der
-echo ""
+# echo "privkey.pem   ==> private.der"
+# sudo openssl x509 -outform der -in   privkey.pem -out private.der
+# echo ""
 
 #certificate.crt
 #cert.csr
