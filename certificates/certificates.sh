@@ -1,12 +1,7 @@
 #!/usr/bin/env bash
 
-
 sudo chmod 777 /usr/share/hassio/ssl
 cd /usr/share/hassio/ssl
-
-echo "Copiando arquivo chain.pem de $1" 
-cp /usr/share/hassio/addons/data/core_duckdns/letsencrypt/$1.duckdns.org/chain.pem /usr/share/hassio/ssl
-
 
 echo "listener 8884 - protocol websockets use:"
 echo "cafile /ssl/chain.pem"
