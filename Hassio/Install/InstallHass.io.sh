@@ -20,7 +20,6 @@ echo ""
 echo "[Info] Install dependencies: bash jq curl avahi-daemon dbus software-properties-common apparmor-utils"
 #sudo snap install jq
 sudo apt-get install bash jq curl avahi-daemon dbus software-properties-common apparmor-utils
-
 echo ""
 echo ""
 echo ""
