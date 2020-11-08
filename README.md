@@ -1,7 +1,7 @@
 # A - Intalls Ubuntu on EC2 by AWS
 
 1. You need to follow this tutorial (https://aws.amazon.com/pt/blogs/iot/how-to-bridge-mosquitto-mqtt-broker-to-aws-iot/)
-   - Bellow until Fig. 9 (https://d2908q01vomqb2.cloudfront.net/f6e1126cedebf23e1463aee73f9df08783640400/2020/05/04/Screen-Shot-2020-04-22-at-2.18.38-PM.png)
+   - Until Fig. 9 (https://d2908q01vomqb2.cloudfront.net/f6e1126cedebf23e1463aee73f9df08783640400/2020/05/04/Screen-Shot-2020-04-22-at-2.18.38-PM.png)
      - Add the porta 8123, 1883, 8883, 1884, 8884, 9000, 81 like image above to open ports
    - Ande stop before install "sudo apt-add-repository ppa:mosquitto-dev/mosquitto-ppa"
 
