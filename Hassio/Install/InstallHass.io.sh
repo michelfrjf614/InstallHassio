@@ -12,19 +12,19 @@ echo ""
 echo ""
 echo ""
 echo "[Update] update SO"
-sudo apt-get update
+sudo apt-get -y update
 
 echo ""
 echo ""
 echo ""
 echo "[Info] Install dependencies: bash jq curl avahi-daemon dbus software-properties-common apparmor-utils"
 #sudo snap install jq
-sudo apt-get install bash jq curl avahi-daemon dbus software-properties-common apparmor-utils
+sudo apt-get -y install bash jq curl avahi-daemon dbus software-properties-common apparmor-utils
 echo ""
 echo ""
 echo ""
 echo "[Info] Install apt-transport-https ca-certificates curl software-properties-common -y"
-sudo apt-get install apt-transport-https ca-certificates curl software-properties-common -y
+sudo apt-get -y install apt-transport-https ca-certificates curl software-properties-common -y
 
 echo ""
 echo ""
@@ -32,8 +32,8 @@ echo ""
 echo "[Info] Install Docker Ubuntu"
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-sudo apt-get update
-sudo apt-get install docker-ce -y
+sudo apt-get -y update
+sudo apt-get -y install docker-ce -y
 
 sudo chmod 777 /etc
 sudo su
@@ -48,7 +48,7 @@ echo ""
 echo ""
 echo ""
 echo "[Info] Install network-manager"
-sudo apt-get install network-manager
+sudo apt-get -y install network-manager
 
 echo ""
 echo ""
@@ -62,6 +62,11 @@ echo ""
 echo "Run the Portainerio" 
 sudo docker run -d -p 9000:9000 -p 8000:8000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v /path/on/host/data:/data portainer/portainer
 
+echo ""
+echo ""
+echo ""
+echo "[Info] Aguardando 1 minuto para configurar todo o mosquitto"
+sleep 60
 
 echo ""
 echo ""
