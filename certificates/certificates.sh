@@ -11,12 +11,8 @@ function warn  { echo -e "[Warning] $*"; }
 sudo chmod 777 /usr/share/hassio/ssl
 cd /usr/share/hassio/ssl
 
-echo "Digite o nome do nome dominio duckdns: " 
-read dns
-echo "o DNS informado foi $dns"
-
 echo "Copinado arquivo chain.pem" 
-cp /usr/share/hassio/addons/data/core_duckdns/letsencrypt/$_DNS.duckdns.org/chain.pem /usr/share/hassio/ssl
+cp /usr/share/hassio/addons/data/core_duckdns/letsencrypt/$1.duckdns.org/chain.pem /usr/share/hassio/ssl
 
 
 echo "listener 8884 - protocol websockets use:"
