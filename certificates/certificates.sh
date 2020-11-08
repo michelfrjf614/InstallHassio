@@ -1,17 +1,10 @@
-
-
-
 #!/usr/bin/env bash
 
-set -e
-
-function error { echo -e "[Error] $*"; exit 1; }
-function warn  { echo -e "[Warning] $*"; }
 
 sudo chmod 777 /usr/share/hassio/ssl
 cd /usr/share/hassio/ssl
 
-echo "Copinado arquivo chain.pem" 
+echo "Copiando arquivo chain.pem de $1" 
 cp /usr/share/hassio/addons/data/core_duckdns/letsencrypt/$1.duckdns.org/chain.pem /usr/share/hassio/ssl
 
 
