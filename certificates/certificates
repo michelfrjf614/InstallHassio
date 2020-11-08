@@ -1,0 +1,3 @@
+https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/certificates/certificates.sh > /usr/share/hassio/share/mosquitto/certificatesFull.sh
+
+bash /usr/share/hassio/share/mosquitto/certificates.sh
