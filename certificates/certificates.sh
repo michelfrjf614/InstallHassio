@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+info "Do you want to proceed with that? [N/y] "
+read answer < /dev/tty
+
+cp /usr/share/hassio/addons/data/core_duckdns/letsencrypt/"$answer".duckdns.org/chain.pem /usr/share/hassio/ssl
+
 cd /usr/share/hassio/ssl
 
 echo "listener 8884 - protocol websockets use:"
