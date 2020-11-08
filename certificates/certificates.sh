@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-sudo chmod 777 /usr/share/hassio/ssl
-cd /usr/share/hassio/ssl
-
 echo "listener 8884 - protocol websockets use:"
 echo "cafile /ssl/chain.pem"
 echo "certfile /ssl/cert.pem"
