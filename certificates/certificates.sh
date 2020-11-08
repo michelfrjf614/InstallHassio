@@ -26,7 +26,7 @@ echo ""
 
 echo "Firmwware use:"
 echo "chain.pem     ==> ca.der"
-sudo openssl x509 -outform der -in     chain.pem -out ca.der
+sudo openssl x509 -outform der -in chain.pem -out ca.der
 echo ""
 
 echo "fullchain.pem ==> cert.der"
@@ -34,7 +34,7 @@ sudo openssl x509 -outform der -in fullchain.pem -out cert.der
 echo ""
 
 echo "privkey.pem   ==> private.der"
-sudo openssl x509 -outform der -in   privkey.pem -out private.der
+sudo openssl x509 -outform der -in privkey.pem -out private.der
 echo ""
 
 
