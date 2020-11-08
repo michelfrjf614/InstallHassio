@@ -37,11 +37,6 @@ sudo su
 
 echo ""
 echo ""
-#echo "[Info] Install Home Assistant - from https://github.com/icanfixitweb/Hassio-Virtual-Machine/tree/master/hassio_install_script"
-#sudo curl -sL https://raw.githubusercontent.com/icanfixitweb/Hassio-Virtual-Machine/master/hassio_install_script/original_script/installer.sh | bash -s -- -d $DIR_HASSIO
-
-echo ""
-echo ""
 echo "[Info] Install network-manager"
 sudo apt-get -y install network-manager
 
