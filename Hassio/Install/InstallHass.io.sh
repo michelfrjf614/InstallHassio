@@ -121,6 +121,7 @@ echo "[Info] File Password - passwd"
 echo "" > "/usr/share/hassio/share/mosquitto/config/passwd"
 sudo chmod 777 /usr/share/hassio/share/mosquitto/config/passwd
 
+sudo chmod 777 /usr/share/hassio/ssl
 
 
 echo ""
