@@ -42,7 +42,7 @@ echo ""
 
 echo "Extrair .DER de .PEM:  privkey.pem   ==> private.der"
 #sudo openssl x509 -outform der -in privkey.pem -out private.der
- sudo openssl rsa  -outform DER -in private.pem -out private.der
+ sudo openssl rsa  -outform DER -in privkey.pem -out private.der
 echo ""
 echo ""
 echo "Certificado gerados"
