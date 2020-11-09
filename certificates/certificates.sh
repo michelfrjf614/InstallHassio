@@ -24,7 +24,9 @@ echo ""
 echo "#####################################################################################"
 
 echo "Extrair .CRT de .PEM:   fullchain.PEM ==> cert.crt"
-sudo openssl crl2pkcs7 -nocrl -certfile fullchain.pem | openssl pkcs7 -print_certs -out cert.crt
+#sudo openssl crl2pkcs7 -nocrl -certfile fullchain.pem | openssl pkcs7 -print_certs -out cert.crt
+sudo openssl x509 -outform der -in fullchain.pem -out cert.crt
+#sudo openssl pkcs12 -export -out certificate.pfx -inkey privateKey.key -in certificate.crt -certfile CACert.crt
 echo ""
 
 
