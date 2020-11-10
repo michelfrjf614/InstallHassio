@@ -4,6 +4,9 @@ info "Digite o nome do nome dominio no duckdns. Exemplo se for NOME_DO_DNS.duckd
 read answer < /dev/tty
 
 sudo cp /usr/share/hassio/addons/data/core_duckdns/letsencrypt/"$answer".duckdns.org/chain.pem /usr/share/hassio/ssl
+# sudo cp /usr/share/hassio/addons/data/core_duckdns/letsencrypt/testexpto.duckdns.org/chain.pem /usr/share/hassio/ssl
+# sudo cp /usr/share/hassio/addons/data/core_duckdns/letsencrypt/testexpto.duckdns.org/fullchain.pem /usr/share/hassio/ssl
+# sudo cp /usr/share/hassio/addons/data/core_duckdns/letsencrypt/testexpto.duckdns.org/privkey.pem /usr/share/hassio/ssl
 
 cd /usr/share/hassio/ssl
 
@@ -24,26 +27,25 @@ echo ""
 echo "#####################################################################################"
 
 echo "Extrair .CRT de .PEM:   fullchain.PEM ==> cert.crt"
-#sudo openssl crl2pkcs7 -nocrl -certfile fullchain.pem | openssl pkcs7 -print_certs -out cert.crt
-sudo openssl x509 -outform der -in fullchain.pem -out cert.crt
-#sudo openssl pkcs12 -export -out certificate.pfx -inkey privateKey.key -in certificate.crt -certfile CACert.crt
+sudo  openssl crl2pkcs7 -nocrl -certfile fullchain.pem | openssl pkcs7 -print_certs -out cert.crt
 echo ""
 
+
+echo "Extrair cert.Pem de fullcert.PEM:   fullchain.PEM ==> cert.crt"
+
+echo ""
 
 
 echo "Firmwware use:"
 echo "Extrair .DER de .PEM:  chain.pem     ==> ca.der"
-#sudo openssl x509 -outform der -in chain.pem -out ca.der
- sudo openssl x509 -outform DER -in chain.pem -out ca.der 
+ sudo openssl x509 -outform DER -in chain.pem -out ca.der
 echo ""
 
 echo "Extrair .DER de .PEM:  fullchain.pem ==> cert.der"
-#sudo openssl x509 -outform der -in fullchain.pem -out cert.der
  sudo openssl x509 -outform DER -in fullchain.pem -out cert.der
 echo ""
 
 echo "Extrair .DER de .PEM:  privkey.pem   ==> private.der"
-#sudo openssl x509 -outform der -in privkey.pem -out private.der
  sudo openssl rsa  -outform DER -in privkey.pem -out private.der
 echo ""
 echo ""
