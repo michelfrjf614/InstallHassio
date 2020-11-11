@@ -40,4 +40,4 @@ tts:
 #automation: !include automations.yaml
 #script: !include scripts.yaml
 #scene: !include scenes.yaml
-#light: !include light.yaml
+light: !include light.yaml
