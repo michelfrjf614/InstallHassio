@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+echo ""
 echo "Nós precisamos dos certificados para as portas a seguir:"
 echo ""
 echo "listener 8884 - protocol websockets use:"
