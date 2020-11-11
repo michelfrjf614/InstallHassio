@@ -51,15 +51,11 @@ sudo docker run -d -p 9000:9000 -p 8000:8000 --name portainer --restart always -
 
 echo ""
 echo ""
-echo "[Info] Aguardando 30 segundos para configurar todo o mosquitto"
+echo "[Info] Aguardando 20 segundos para configurar todo o mosquitto"
 # sleep 5
-# echo "[Info] falta 35 segundos"
+# echo "[Info] falta 25 segundos"
 # sleep 5
-# echo "[Info] falta 30 segundos"
-sleep 5
-echo "[Info] falta 25 segundos"
-sleep 5
-echo "[Info] falta 20 segundos"
+# echo "[Info] falta 20 segundos"
 sleep 5
 echo "[Info] falta 15 segundos"
 sleep 5
@@ -94,10 +90,10 @@ echo ""
 echo ""
 echo "[Info] copy light.yaml to homeassistant"
 sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/light.yaml > "/usr/share/hassio/homeassistant/light.yaml"
-sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/groups.yaml > "/usr/share/hassio/homeassistant/groups.yaml"
-sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/automations.yaml > "/usr/share/hassio/homeassistant/automations.yaml"
-sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/scripts.yaml > "/usr/share/hassio/homeassistant/scripts.yaml"
-sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/scenes.yaml > "/usr/share/hassio/homeassistant/scenes.yaml"
+#sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/groups.yaml > "/usr/share/hassio/homeassistant/groups.yaml"
+#sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/automations.yaml > "/usr/share/hassio/homeassistant/automations.yaml"
+#sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/scripts.yaml > "/usr/share/hassio/homeassistant/scripts.yaml"
+#sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/scenes.yaml > "/usr/share/hassio/homeassistant/scenes.yaml"
 
 
 echo ""
