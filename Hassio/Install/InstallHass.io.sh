@@ -123,7 +123,7 @@ echo ""
 echo ""
 echo "[Info] copy configuration.yaml to homeassistant"
 sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/configuration.yaml > "/usr/share/hassio/homeassistant/configuration.yaml"
-#sed -i "s/smartboardneww/$answer/" /usr/share/hassio/homeassistant/configuration.yaml
+sed -i "s/smartboardneww/$answer/" /usr/share/hassio/homeassistant/configuration.yaml
 
 
 echo ""
