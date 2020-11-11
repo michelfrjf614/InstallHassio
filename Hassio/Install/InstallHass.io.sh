@@ -63,7 +63,7 @@ echo "[Info] falta 10 segundos"
 sleep 5
 echo "[Info] falta 5 segundos"
 sleep 5
-echo "[Info] passou 40 segundo"
+echo "[Info] passou 20 segundo"
 
 echo ""
 echo ""
