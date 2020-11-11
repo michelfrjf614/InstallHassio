@@ -30,12 +30,6 @@ echo "Extrair .CRT de .PEM:   fullchain.PEM ==> cert.crt"
 sudo  openssl crl2pkcs7 -nocrl -certfile fullchain.pem | openssl pkcs7 -print_certs -out cert.crt
 echo ""
 
-
-echo "Extrair cert.Pem de fullcert.PEM:   fullchain.PEM ==> cert.crt"
-
-echo ""
-
-
 echo "Firmwware use:"
 echo "Extrair .DER de .PEM:  chain.pem     ==> ca.der"
  sudo openssl x509 -outform DER -in chain.pem -out ca.der
