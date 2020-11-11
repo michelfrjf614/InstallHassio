@@ -51,11 +51,23 @@ sudo docker run -d -p 9000:9000 -p 8000:8000 --name portainer --restart always -
 
 echo ""
 echo ""
-echo "[Info] Aguardando 20 segundos para configurar todo o mosquitto"
-# sleep 5
-# echo "[Info] falta 25 segundos"
-# sleep 5
-# echo "[Info] falta 20 segundos"
+echo "[Info] Aguardando 60 segundos para configurar todo o mosquitto"
+sleep 5
+echo "[Info] falta 55 segundos"
+sleep 5
+echo "[Info] falta 50 segundos"
+sleep 5
+echo "[Info] falta 45 segundos"
+sleep 5
+echo "[Info] falta 40 segundos"
+sleep 5
+echo "[Info] falta 35 segundos"
+sleep 5
+echo "[Info] falta 30 segundos"
+sleep 5
+echo "[Info] falta 25 segundos"
+sleep 5
+echo "[Info] falta 20 segundos"
 sleep 5
 echo "[Info] falta 15 segundos"
 sleep 5
@@ -63,7 +75,7 @@ echo "[Info] falta 10 segundos"
 sleep 5
 echo "[Info] falta 5 segundos"
 sleep 5
-echo "[Info] passou 20 segundo"
+echo "[Info] passou 60 segundos"
 
 echo ""
 echo ""
