@@ -42,7 +42,7 @@ echo ""
 echo "    Extrair .DER de .PEM:  privkey.pem   ==> private.der"
 sudo openssl rsa  -outform DER -in privkey.pem -out private.der
 echo ""
-echo "Certificado gerados, acesse com endereço https://"$answer".duckdns.org.org:8123/" 
+echo "Certificado gerados, acesse com endereço https://"$answer".duckdns.org:8123/" 
 echo ""
 echo ""
 
