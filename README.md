@@ -30,7 +30,7 @@
 
 1. sudo curl -L https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/certificates/certificates.sh | bash -s
    - Update the IP on domain from duckdns;
-   - Get rha address showed in the final on terminal 
+   - Get the address showed in the final on terminal 
 
 # D - Commands to hekp you
 
