@@ -12,13 +12,15 @@
 # B - Intalls HASSIO on Ubuntu and config tools from HASSIO
 
 1. Exec: **sudo curl -L https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/Install/InstallHass.io.sh | bash -s**
-   - During the execution im input domain from duckdns
+   - During the execution input domain from duckdns
 
 2. Uodate domain on duckdns **https://www.duckdns.org/** with the IP by EC2 from AWS (ipAWS)
 
 3. Open ipAWS:8123 and on menu "Hassio / Supervisor" install Mosquitto, MariaDB, Duckdns
 
-4. Copy the infomations from git to Hassio / Supervisor -> Mosquitto / MariaDB / Duckdns -> Con figuration. Get the information in the link **https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/Tools/configTools** 
+4. Copy the infomations from git to Hassio / Supervisor -> Mosquitto / MariaDB / Duckdns -> Configuration. Get the information in the link **https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/Tools/configTools** 
+   - At the configuration duckdns chage o dns **smartboardneww**.duckdns.org to the dns inputed on duckdns
+
 
 5. Install the tools (this is optional) File editor, Terminal & SSH on "Hassio / Supervisor
 
