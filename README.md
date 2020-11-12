@@ -44,4 +44,4 @@
    - sudo passwd ubuntu
 
 4. [Info] Reset user and password of Home assistent
-   - sudo rmdir /usr/share/hassio/homeassistant/.storage
+   - sudo rmdir /usr/share/hassio/homeassistant/.storage 
