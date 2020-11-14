@@ -7,5 +7,4 @@ echo "topic readwrite #" >> /usr/share/hassio/share/mosquitto/config/accesscontr
 echo "" >> /usr/share/hassio/share/mosquitto/config/accesscontrollist
 
 # API deve chahar esse dois comandos
-#sudo curl -L https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Mosquitto/Users/users.sh > users.sh
-#users.sh nome_do_usuario 
+# bash /usr/share/hassio/share/mosquitto/config/users.sh nome_do_usuario 
