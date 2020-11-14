@@ -9,10 +9,9 @@ pink=`tput setaf 5`
 whiteblue=`tput setaf 6`
 white=`tput setaf 7`
 
-
-echo "Username: $1";
-echo "Age: $2";
-echo "Full Name: $3";
+echo "Username: $NAME";
+echo "Age: $AGE";
+echo "Full Name: $FULLNAME";
 # bash userReg-positional-parameter.sh john 25 'John Smith'
 
 
