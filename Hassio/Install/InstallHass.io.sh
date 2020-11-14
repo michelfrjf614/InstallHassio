@@ -138,13 +138,17 @@ sed -i "s/smartboardneww/$answer/" /usr/share/hassio/homeassistant/configuration
 
 echo ""
 echo ""
-echo "[Info] copy light.yaml to homeassistant"
+echo "[Info] copy light.yaml, groups.yaml, automations.yaml, scripts.yaml e scenes.yaml  to homeassistant"
 sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/light.yaml > "/usr/share/hassio/homeassistant/light.yaml"
 sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/groups.yaml > "/usr/share/hassio/homeassistant/groups.yaml"
 sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/automations.yaml > "/usr/share/hassio/homeassistant/automations.yaml"
 sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/scripts.yaml > "/usr/share/hassio/homeassistant/scripts.yaml"
 sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/scenes.yaml > "/usr/share/hassio/homeassistant/scenes.yaml"
 
+echo ""
+echo ""
+echo "[Info] File Password - users.sh"
+sudo curl -L https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Mosquitto/Users/users.sh > /usr/share/hassio/share/mosquitto/config/accesscontrollist/users.sh
 
 echo ""
 echo ""
@@ -152,6 +156,12 @@ echo "[Info] File ACL - accesscontrollist"
 sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Mosquitto/Config/accesscontrollist > "/usr/share/hassio/share/mosquitto/config/accesscontrollist"
 sudo chmod 777 /usr/share/hassio/share/mosquitto/config/accesscontrollist
 
+echo ""
+echo ""
+echo "[Info] File Password - passwd"
+echo "" > "/usr/share/hassio/share/mosquitto/config/passwd"
+sudo chmod 777 /usr/share/hassio/share/mosquitto/config/passwd
+sudo chmod 777 /usr/share/hassio/ssl
 
 echo ""
 echo ""
@@ -160,12 +170,7 @@ sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main
 sudo chmod 777 /usr/share/hassio/share/mosquitto/config/addMosquitto.conf
 
 
-echo ""
-echo ""
-echo "[Info] File Password - passwd"
-echo "" > "/usr/share/hassio/share/mosquitto/config/passwd"
-sudo chmod 777 /usr/share/hassio/share/mosquitto/config/passwd
-sudo chmod 777 /usr/share/hassio/ssl
+
 
 echo ${yellow}
 
