@@ -1,5 +1,14 @@
 #!/usr/bin/env bash
 
+reset=`tput sgr0`
+red=`tput setaf 1`
+green=`tput setaf 2`
+yelloy=`tput setaf 3`
+darkblue=`tput setaf 4`
+pink=`tput setaf 5`
+whiteblue=`tput setaf 6`
+white=`tput setaf 7`
+
 DIR_ME="ubuntu"
 DIR_HASSIO=/home/ubuntu/docker/hassio
 
@@ -158,10 +167,18 @@ echo "" > "/usr/share/hassio/share/mosquitto/config/passwd"
 sudo chmod 777 /usr/share/hassio/share/mosquitto/config/passwd
 sudo chmod 777 /usr/share/hassio/ssl
 
+${yellow}
+
+echo ""
+echo ""
+echo "Fist Set Finished"
+
 echo ""
 echo ""
 echo "Once the installation is completed go to http://hassio.local:8123/ or http://yourIPaddress:8123/ in the future http://$answer.duckdns.org/"
 echo "(replace yourIPaddress with your actual IP address) from your web browser to access your new Home Assistant installation."
+
+${red}
 
 echo ""
 echo ""
