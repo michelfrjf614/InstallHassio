@@ -2,7 +2,7 @@
 
 echo "Add user"
 
-echo "user teste" >> /usr/share/hassio/share/mosquitto/config/accesscontrollist_teste
+echo "user [$1]" >> /usr/share/hassio/share/mosquitto/config/accesscontrollist_teste
 echo "topic readwrite #" >> /usr/share/hassio/share/mosquitto/config/accesscontrollist_teste
 echo "" >> /usr/share/hassio/share/mosquitto/config/accesscontrollist_teste
 
