@@ -9,7 +9,7 @@ pink=`tput setaf 5`
 whiteblue=`tput setaf 6`
 white=`tput setaf 7`
 
-${red}
+echo ${red}
 
 echo ""
 echo "Nós precisamos dos certificados para as portas a seguir:"
@@ -27,7 +27,7 @@ echo "keyfile /ssl/privkey.pem"
 echo ""
 echo ""
 
-${white}
+echo ${white}
 
 echo "#####################################################################################"
 
@@ -58,7 +58,7 @@ sudo openssl rsa  -outform DER -in privkey.pem -out private.der
 echo ""
 echo ""
 
-${yellow}
+echo ${yellow}
 echo "Certificado gerados, acesse com endereço https://"$answer".duckdns.org:8123/" 
 echo ""
 echo ""
