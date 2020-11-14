@@ -3,7 +3,7 @@
 reset=`tput sgr0`
 red=`tput setaf 1`
 green=`tput setaf 2`
-yelloy=`tput setaf 3`
+yellow=`tput setaf 3`
 darkblue=`tput setaf 4`
 pink=`tput setaf 5`
 whiteblue=`tput setaf 6`
