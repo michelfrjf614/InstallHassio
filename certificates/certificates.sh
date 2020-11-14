@@ -1,5 +1,16 @@
 #!/usr/bin/env bash
 
+reset=`tput sgr0`
+red=`tput setaf 1`
+green=`tput setaf 2`
+yelloy=`tput setaf 3`
+darkblue=`tput setaf 4`
+pink=`tput setaf 5`
+whiteblue=`tput setaf 6`
+white=`tput setaf 7`
+
+${red}
+
 echo ""
 echo "Nós precisamos dos certificados para as portas a seguir:"
 echo ""
@@ -14,6 +25,9 @@ echo "cafile /ssl/chain.pem"
 echo "certfile /ssl/cert.crt"
 echo "keyfile /ssl/privkey.pem"
 echo ""
+echo ""
+
+${white}
 
 echo "#####################################################################################"
 
@@ -42,6 +56,9 @@ echo ""
 echo "    Extrair .DER de .PEM:  privkey.pem   ==> private.der"
 sudo openssl rsa  -outform DER -in privkey.pem -out private.der
 echo ""
+echo ""
+
+${yellow}
 echo "Certificado gerados, acesse com endereço https://"$answer".duckdns.org:8123/" 
 echo ""
 echo ""
