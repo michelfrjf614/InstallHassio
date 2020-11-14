@@ -1,4 +1,3 @@
-
 #!/usr/bin/env bash
 
 user [$1] > /usr/share/hassio/share/mosquitto/config/accesscontrollist_teste
