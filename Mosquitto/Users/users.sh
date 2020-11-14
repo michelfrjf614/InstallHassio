@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-user [$1] > /usr/share/hassio/share/mosquitto/config/accesscontrollist_teste
+echo "Add user"
+
+user teste > /usr/share/hassio/share/mosquitto/config/accesscontrollist_teste
 topic readwrite # > /usr/share/hassio/share/mosquitto/config/accesscontrollist_teste
 echo # > /usr/share/hassio/share/mosquitto/config/accesscontrollist_teste
 
