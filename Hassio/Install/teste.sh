@@ -10,9 +10,14 @@ whiteblue=`tput setaf 6`
 white=`tput setaf 7`
 
 
+echo "Username: $1";
+echo "Age: $2";
+echo "Full Name: $3";
+# bash userReg-positional-parameter.sh john 25 'John Smith'
+
 
 info "Digite o nome do nome dominio no duckdns. Exemplo se for NOME_DO_DNS.duckdns.org informar o NOME_DO_DNS:"
-read answer < /dev/tty
+read answer
 
 sudo sed -i "s/smartboardneww/$answer/" /usr/share/hassio/homeassistant/configuration.yaml
 
@@ -34,4 +39,4 @@ echo "Once the installation is completed go to http://hassio.local:8123/ or http
 
 
 
-#sudo curl -L https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/Install/teste.sh | bash -s
+#sudo curl -L https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/Install/teste.sh | bash teste.sh john 25 'John Smith'
