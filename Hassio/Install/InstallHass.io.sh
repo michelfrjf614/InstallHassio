@@ -3,10 +3,6 @@
 DIR_ME="ubuntu"
 DIR_HASSIO=/home/ubuntu/docker/hassio
 
-info "Digite o nome do nome dominio no duckdns. Exemplo se for NOME_DO_DNS.duckdns.org informar o NOME_DO_DNS:"
-read answer < /dev/tty
-
-
 echo ""
 echo ""
 echo "[Update] update SO"
@@ -123,6 +119,11 @@ echo ""
 echo ""
 echo "[Info] copy configuration.yaml to homeassistant"
 sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/configuration.yaml > "/usr/share/hassio/homeassistant/configuration.yaml"
+
+
+
+info "Digite o nome do nome dominio no duckdns. Exemplo se for NOME_DO_DNS.duckdns.org informar o NOME_DO_DNS:"
+read answer < /dev/tty
 sed -i "s/smartboardneww/$answer/" /usr/share/hassio/homeassistant/configuration.yaml
 
 
