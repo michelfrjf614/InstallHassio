@@ -9,6 +9,11 @@ pink=`tput setaf 5`
 whiteblue=`tput setaf 6`
 white=`tput setaf 7`
 
+
+NAME=john 
+AGE=25 
+FULLNAME='John Smith'
+
 echo "Username: $NAME";
 echo "Ageeeeeeeeeeee: $AGE";
 echo "Full Name: $FULLNAME";
