@@ -4,16 +4,26 @@
 
 
 #como chamar esse shell
-#./bin/my_shopping.sh "User michel" "Pass michel.123 /Panel456f7d
+#./bin/my_shopping.sh michel       michel.123   /Panel456f7d
+#./bin/my_shopping.sh var_username var_password var_topic_geral
 
 var_username=#1  
 var_password=#2
-var_topic=#3
+var_topic_geral=#3
 
 
 
 #Create a file with user and password
 mosquitto_passwd -b /share/mosquitto/config/passwd $var_username $var_password
+
+echo "user $var_username" > /share/mosquitto/config/accesscontrollist
+echo "topic $var_topic_geral/#" > /share/mosquitto/config/accesscontrollist
+echo "" > /share/mosquitto/config/accesscontrollist
+
+
+
+
+
 
 ###if you need to update the password of this user
 ###mosquitto_passwd -U /share/mosquitto/config/passwd $var_username $var_new_password
@@ -23,9 +33,3 @@ mosquitto_passwd -b /share/mosquitto/config/passwd $var_username $var_password
 
 ###Delete the specified user from the password file.
 ###mosquitto_passwd -D /share/mosquitto/config/passwd $var_username
-
-
-
-echo "user $var_username" > /share/mosquitto/config/accesscontrollist
-echo "topic $var_topic/#" > /share/mosquitto/config/accesscontrollist
-echo "" > /share/mosquitto/config/accesscontrollist
