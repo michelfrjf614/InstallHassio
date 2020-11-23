@@ -149,6 +149,9 @@ echo ""
 echo ""
 echo "[Info] File Password - users.sh"
 sudo curl -L https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Mosquitto/Users/users.sh > /usr/share/hassio/share/mosquitto/config/users.sh
+#sudo curl -L https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Mosquitto/Config/sh/configUsers.sh > /usr/share/hassio/share/mosquitto/config/configUsers.sh
+
+
 
 echo ""
 echo ""
