@@ -9,6 +9,28 @@
 
 
 
+#Rever essa parte - Inicio
+
+Vai até o IAM 
+Click em Create role
+  Selecione EC2  e click em next
+  Depois selecione “AmazonS3FullAccess  e click em next
+  Informe Name / “ec2 S3 access”
+
+Crie mais uma rule 
+  Selecione Lambda  e click em next
+  Depois selecione “AWSLambdaBasicExecutionRole , selecione também “AmazonEC2FullAccess”, selecione também “AmazonS3FullAccess” e click em next
+  Informe Name / “Lambda_ssh”
+
+Video de referencia: https://www.youtube.com/watch?v=jFAipm0NsVA&ab_channel=SrceCde
+
+Na Criação do instancia do EC2 selecione o iAM “ec2 S3 access” e “”
+
+#Rever essa parte - Fim
+
+
+
+
 # B - Intalls HASSIO on Ubuntu and config tools from HASSIO
 
 1. Exec: **sudo curl -L https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/Install/InstallHass.io.sh | bash -s**
