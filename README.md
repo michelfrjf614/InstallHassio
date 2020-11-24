@@ -9,7 +9,7 @@
 
 
 
-#Rever essa parte - Inicio
+# Rever essa parte - Inicio
 
 Vai até o IAM 
 Click em Create role
@@ -26,7 +26,7 @@ Video de referencia: https://www.youtube.com/watch?v=jFAipm0NsVA&ab_channel=Srce
 
 Na Criação do instancia do EC2 selecione o iAM “ec2 S3 access” e “”
 
-#Rever essa parte - Fim
+# Rever essa parte - Fim
 
 
 
