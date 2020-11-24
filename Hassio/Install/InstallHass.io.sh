@@ -172,8 +172,55 @@ echo "[Info] Download addMosquitto.conf"
 sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Mosquitto/Config/addMosquitto.conf > "/usr/share/hassio/share/mosquitto/config/addMosquitto.conf"
 sudo chmod 777 /usr/share/hassio/share/mosquitto/config/addMosquitto.conf
 
+echo ""
+echo ""
+echo "##[Info] Install zip"
+sudo apt-get update  -y
+sudo apt install zip -y
 
+echo ""
+echo ""
+echo "##[Info] Verifica a versão do Python deve ser 3.8, caso contrario o diretorio precisa ser ajustado"
+python3 -V
+#sudo apt install python3.8  -y
+#python3 -V
+#python3.8 -V
+#sudo update-alternatives —install /usr/bin/python3 python3 /usr/bin/python3.6 1
+#sudo update-alternatives —install /usr/bin/python3 python3 /usr/bin/python3.8 2
+#sudo update-alternatives —config python3
 
+echo ""
+echo ""
+echo "##[Info] Install PIP"
+sudo apt-get install python3-pip -y
+
+echo ""
+echo ""
+echo "##[Info] Install testresources"
+sudo apt install python3-testresources -y
+
+echo ""
+echo ""
+echo "##[Info] Install paramiko"
+mkdir -p build/python/lib/python3.8/site-packages
+pip3 install paramiko -t build/python/lib/python3.8/site-packages --system
+
+echo ""
+echo ""
+echo "##[Info] Cria o Zip packageParamiko"
+cd build
+zip -r packageParamiko.zip .
+
+aws --version
+#Caso não retorne informações 
+#   curl https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip -o awscliv2.zip
+#   unzip awscliv2.zip
+#   sudo ./aws/install --update
+
+echo ""
+echo ""
+echo "##[Info] Sobe o arquivo packageParamiko para S3 de nome smartboards3"
+aws s3 cp  packageParamiko.zip s3://smartboards3
 
 echo ${yellow}
 
@@ -199,6 +246,7 @@ echo ""
 echo "##[Info] Para Configuracoes no hassio"
 echo "##https://www.home-assistant.io/docs/mqtt/broker#run-your-own"
 echo "##https://community.home-assistant.io/t/solved-connect-ha-to-mqtt-broker-with-tls-ca-crt/158415"
+
 
 #echo ""
 #echo ""
