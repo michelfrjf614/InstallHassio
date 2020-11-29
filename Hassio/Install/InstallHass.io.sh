@@ -145,32 +145,14 @@ sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main
 sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/scripts.yaml > "/usr/share/hassio/homeassistant/scripts.yaml"
 sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/scenes.yaml > "/usr/share/hassio/homeassistant/scenes.yaml"
 
-echo ""
-echo ""
-echo "[Info] File Password - users.sh"
-sudo curl -L https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Mosquitto/Users/users.sh > /usr/share/hassio/share/mosquitto/config/users.sh
-#sudo curl -L https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Mosquitto/Config/sh/configUsers.sh > /usr/share/hassio/share/mosquitto/config/configUsers.sh
 
 
 
-echo ""
-echo ""
-echo "[Info] File ACL - accesscontrollist"
-sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Mosquitto/Config/accesscontrollist > "/usr/share/hassio/share/mosquitto/config/accesscontrollist"
-sudo chmod 777 /usr/share/hassio/share/mosquitto/config/accesscontrollist
 
-echo ""
-echo ""
-echo "[Info] File Password - passwd"
-echo "" > "/usr/share/hassio/share/mosquitto/config/passwd"
-sudo chmod 777 /usr/share/hassio/share/mosquitto/config/passwd
-sudo chmod 777 /usr/share/hassio/ssl
 
-echo ""
-echo ""
-echo "[Info] Download addMosquitto.conf"
-sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Mosquitto/Config/addMosquitto.conf > "/usr/share/hassio/share/mosquitto/config/addMosquitto.conf"
-sudo chmod 777 /usr/share/hassio/share/mosquitto/config/addMosquitto.conf
+#########################################################################################################################################################
+#### Aqui inicia as informações para controle de Usuários
+#########################################################################################################################################################
 
 echo ""
 echo ""
@@ -222,6 +204,33 @@ echo ""
 echo "##[Info] Sobe o arquivo packageParamiko para S3 de nome smartboards3"
 aws s3 cp  packageParamiko.zip s3://smartboards3
 
+echo ""
+echo ""
+echo "[Info] File Password - users.sh"
+sudo curl -L https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Mosquitto/Users/users.sh > /usr/share/hassio/share/mosquitto/config/users.sh
+#sudo curl -L https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Mosquitto/Config/sh/configUsers.sh > /usr/share/hassio/share/mosquitto/config/configUsers.sh
+
+echo ""
+echo ""
+echo "[Info] File ACL - accesscontrollist"
+sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Mosquitto/Config/accesscontrollist > "/usr/share/hassio/share/mosquitto/config/accesscontrollist"
+sudo chmod 777 /usr/share/hassio/share/mosquitto/config/accesscontrollist
+
+echo ""
+echo ""
+echo "[Info] File Password - passwd"
+echo "" > "/usr/share/hassio/share/mosquitto/config/passwd"
+sudo chmod 777 /usr/share/hassio/share/mosquitto/config/passwd
+sudo chmod 777 /usr/share/hassio/ssl
+
+echo ""
+echo ""
+echo "[Info] Download addMosquitto.conf"
+sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Mosquitto/Config/addMosquitto.conf > "/usr/share/hassio/share/mosquitto/config/addMosquitto.conf"
+sudo chmod 777 /usr/share/hassio/share/mosquitto/config/addMosquitto.conf
+
+
+
 echo ${yellow}
 
 echo ""
@@ -248,9 +257,8 @@ echo "##https://www.home-assistant.io/docs/mqtt/broker#run-your-own"
 echo "##https://community.home-assistant.io/t/solved-connect-ha-to-mqtt-broker-with-tls-ca-crt/158415"
 
 
-#echo ""
-#echo ""
-#echo ""
+
+
 #echo "[Info] Run mosquitto on docker "
 #           sudo docker run -it --name=mosquitto                       -p 1883:1883 -p 1884:1884 -p 8883:8883 -p 8884:8884 -p 9001:9001 -v /mosquitto/:/mosquitto/           -v /mosquitto/log:/mosquitto/log -v /mosquitto/data/:/mosquitto/data/  eclipse-mosquitto
 # Example: sudo docker run -it --name=“mosquitto” –restart on-failure -p 1883:1883 -p 1884:1884 -p 8883:8883 -p 8884:8884 -p 9001:9001 -v /srv/mqtt/config:/mqtt/config:ro  -v /srv/mqtt/log:/mqtt/log       -v /srv/mqtt/data/:/mqtt/data/        eclipse-mosquitto
