@@ -1,14 +1,4 @@
 # A - Intalls Ubuntu on EC2 by AWS
-
-//1. You need to follow this tutorial (https://aws.amazon.com/pt/blogs/iot/how-to-bridge-mosquitto-mqtt-broker-to-aws-iot/)
-//   - Until Fig. 9 (https://d2908q01vomqb2.cloudfront.net/f6e1126cedebf23e1463aee73f9df08783640400/2020/05/04/Screen-Shot-2020-04-22-at-2.18.38-PM.png)
-//     - Add the porta 8123, 1883, 8883, 1884, 8884, 9000, 81 like image above to open ports
-//   - Ande stop before install "sudo apt-add-repository ppa:mosquitto-dev/mosquitto-ppa"
-
-//2. Create one domain on duckdns **https://www.duckdns.org/**. with the IP by EC2 from AWS (ipAWS)
-
-
-
 1. You need to follow this tutorial (in this video you can visually see the information: https://www.youtube.com/watch?v=jFAipm0NsVA&ab_channel=SrceCde)
    - Open this link: https://console.aws.amazon.com/console/home?
       - Informe EC2 on field "Find Services": (like https://youtu.be/jFAipm0NsVA?t=104);
@@ -43,6 +33,9 @@
 
 2. Create one domain on duckdns **https://www.duckdns.org/**. with the IP by EC2 from AWS (ipAWS)
 
+3. Create one repository with name "smartboards3" in the link: https://s3.console.aws.amazon.com/s3/
+
+4. 
 
 
 # B - Intalls HASSIO on Ubuntu, config tools from HASSIO and confid datas to manager users
@@ -104,3 +97,20 @@ Na Criação do instancia do EC2 selecione o iAM “ec2 S3 access” e “”
 
 4. [Info] Reset user and password of Home assistent
    - sudo rmdir /usr/share/hassio/homeassistant/.storage 
+
+
+
+
+
+
+
+
+*****************************************
+** backup remover depois 
+*****************************************
+//1. You need to follow this tutorial (https://aws.amazon.com/pt/blogs/iot/how-to-bridge-mosquitto-mqtt-broker-to-aws-iot/)
+//   - Until Fig. 9 (https://d2908q01vomqb2.cloudfront.net/f6e1126cedebf23e1463aee73f9df08783640400/2020/05/04/Screen-Shot-2020-04-22-at-2.18.38-PM.png)
+//     - Add the porta 8123, 1883, 8883, 1884, 8884, 9000, 81 like image above to open ports
+//   - Ande stop before install "sudo apt-add-repository ppa:mosquitto-dev/mosquitto-ppa"
+
+//2. Create one domain on duckdns **https://www.duckdns.org/**. with the IP by EC2 from AWS (ipAWS)
