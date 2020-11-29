@@ -1,15 +1,13 @@
 # A - Intalls Ubuntu on EC2 by AWS
 
-1. You need to follow this tutorial (https://aws.amazon.com/pt/blogs/iot/how-to-bridge-mosquitto-mqtt-broker-to-aws-iot/)
-   - Until Fig. 9 (https://d2908q01vomqb2.cloudfront.net/f6e1126cedebf23e1463aee73f9df08783640400/2020/05/04/Screen-Shot-2020-04-22-at-2.18.38-PM.png)
-     - Add the porta 8123, 1883, 8883, 1884, 8884, 9000, 81 like image above to open ports
-   - Ande stop before install "sudo apt-add-repository ppa:mosquitto-dev/mosquitto-ppa"
+//1. You need to follow this tutorial (https://aws.amazon.com/pt/blogs/iot/how-to-bridge-mosquitto-mqtt-broker-to-aws-iot/)
+//   - Until Fig. 9 (https://d2908q01vomqb2.cloudfront.net/f6e1126cedebf23e1463aee73f9df08783640400/2020/05/04/Screen-Shot-2020-04-22-at-2.18.38-PM.png)
+//     - Add the porta 8123, 1883, 8883, 1884, 8884, 9000, 81 like image above to open ports
+//   - Ande stop before install "sudo apt-add-repository ppa:mosquitto-dev/mosquitto-ppa"
 
-2. Create one domain on duckdns **https://www.duckdns.org/**. with the IP by EC2 from AWS (ipAWS)
+//2. Create one domain on duckdns **https://www.duckdns.org/**. with the IP by EC2 from AWS (ipAWS)
 
 
-
-# Rever essa parte - Inicio
 
 1. You need to follow this tutorial (in this video you can visually see the information: https://www.youtube.com/watch?v=jFAipm0NsVA&ab_channel=SrceCde)
    - Open this link: https://console.aws.amazon.com/console/home?
@@ -24,29 +22,48 @@
          - and click on button "Next";
       - In the next page, clck on button "AddRule":
          - on filed "Type" select the value "HTTP";
+         - Add the porta 8123, 1883, 8883, 1884, 8884, 9000, 81 like image above to open ports
+            - Until Fig. 9 (https://d2908q01vomqb2.cloudfront.net/f6e1126cedebf23e1463aee73f9df08783640400/2020/05/04/Screen-Shot-2020-04-22-at-2.18.38-PM.png)
          - and click on button "Review and Launch";
+         
       - In the next page, click on button "Launch": (https://youtu.be/jFAipm0NsVA?t=178)
          - select "Create a new pair";
          - and informe on "key pair name" the information "labdassh";
          - and click on the button "Download key pair";
          - check the checkbox;
          - click on button "Launch Instance":
-   - 
-      - 
-   - 
-      - 
-   - 
-      - 
-   - 
-      - 
-   - 
-      - 
-   - 
-      - 
-   
-   
-   
-   
+         - after that, click on button "View INstance";
+      - In the next page, 
+        - check the instance 
+        - click on button "conect";
+      - In the next page, 
+        - click on button "conect" again;
+      - On terminal
+         -  Exec: **sudo curl -L https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/Install/InstallHass.io.sh | bash -s**
+
+2. Create one domain on duckdns **https://www.duckdns.org/**. with the IP by EC2 from AWS (ipAWS)
+
+
+
+# B - Intalls HASSIO on Ubuntu, config tools from HASSIO and confid datas to manager users
+
+1. Exec: **sudo curl -L https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/Install/InstallHass.io.sh | bash -s**
+   - During the execution input domain from duckdns
+
+2. Uodate domain on duckdns **https://www.duckdns.org/** with the IP by EC2 from AWS (ipAWS)
+
+3. Open ipAWS:8123 and on menu "Hassio / Supervisor" install Mosquitto, MariaDB, Duckdns
+
+4. Copy the infomations from git to Hassio / Supervisor -> Mosquitto / MariaDB / Duckdns -> Configuration. Get the information in the link **https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/Tools/configTools** 
+   - At the configuration duckdns chage o dns **smartboardneww**.duckdns.org to the dns inputed on duckdns
+
+
+5. Install the tools (this is optional) File editor, Terminal & SSH on "Hassio / Supervisor
+
+
+
+
+# Rever essa parte - Inicio
 
 Vai até o IAM 
 Click em Create role
@@ -65,23 +82,6 @@ Na Criação do instancia do EC2 selecione o iAM “ec2 S3 access” e “”
 
 # Rever essa parte - Fim
 
-
-
-
-# B - Intalls HASSIO on Ubuntu and config tools from HASSIO
-
-1. Exec: **sudo curl -L https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/Install/InstallHass.io.sh | bash -s**
-   - During the execution input domain from duckdns
-
-2. Uodate domain on duckdns **https://www.duckdns.org/** with the IP by EC2 from AWS (ipAWS)
-
-3. Open ipAWS:8123 and on menu "Hassio / Supervisor" install Mosquitto, MariaDB, Duckdns
-
-4. Copy the infomations from git to Hassio / Supervisor -> Mosquitto / MariaDB / Duckdns -> Configuration. Get the information in the link **https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/Tools/configTools** 
-   - At the configuration duckdns chage o dns **smartboardneww**.duckdns.org to the dns inputed on duckdns
-
-
-5. Install the tools (this is optional) File editor, Terminal & SSH on "Hassio / Supervisor
 
 
 
