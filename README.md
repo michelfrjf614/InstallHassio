@@ -11,6 +11,43 @@
 
 # Rever essa parte - Inicio
 
+1. You need to follow this tutorial (in this video you can visually see the information: https://www.youtube.com/watch?v=jFAipm0NsVA&ab_channel=SrceCde)
+   - Open this link: https://console.aws.amazon.com/console/home?
+      - Informe EC2 on field "Find Services": (like https://youtu.be/jFAipm0NsVA?t=104);
+      - In the next page, click on button "Launch Instance": (https://youtu.be/jFAipm0NsVA?t=111);
+      - In the next page, select "Ubuntu Servrer 20.04" (64-bits): (https://youtu.be/jFAipm0NsVA?t=114);
+      - In the next page, click on button "Next": with de machine "Free" selected (https://youtu.be/jFAipm0NsVA?t=124);
+      - In the next page, click on button "Next";
+      - In the next page: (https://youtu.be/jFAipm0NsVA?t=140);
+         - click on "click to add name tag";
+         - input "Lambda-Layuer";
+         - and click on button "Next";
+      - In the next page, clck on button "AddRule":
+         - on filed "Type" select the value "HTTP";
+         - and click on button "Review and Launch";
+      - In the next page, click on button "Launch": (https://youtu.be/jFAipm0NsVA?t=178)
+         - select "Create a new pair";
+         - and informe on "key pair name" the information "labdassh";
+         - and click on the button "Download key pair";
+         - check the checkbox;
+         - click on button "Launch Instance":
+   - 
+      - 
+   - 
+      - 
+   - 
+      - 
+   - 
+      - 
+   - 
+      - 
+   - 
+      - 
+   
+   
+   
+   
+
 Vai até o IAM 
 Click em Create role
   Selecione EC2  e click em next
