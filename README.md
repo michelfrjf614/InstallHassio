@@ -28,14 +28,10 @@
         - click on button "conect";
       - In the next page, 
         - click on button "conect" again;
-      - On terminal
-         -  Exec: **sudo curl -L https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/Install/InstallHass.io.sh | bash -s**
 
 2. Create one domain on duckdns **https://www.duckdns.org/**. with the IP by EC2 from AWS (ipAWS)
 
 3. Create one repository with name "smartboards3" in the link: https://s3.console.aws.amazon.com/s3/
-
-4. 
 
 
 # B - Intalls HASSIO on Ubuntu, config tools from HASSIO and confid datas to manager users
