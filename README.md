@@ -1,11 +1,29 @@
 # A - Intalls Ubuntu on EC2 by AWS
-1. You need to follow this tutorial (in this video you can visually see the information: https://www.youtube.com/watch?v=jFAipm0NsVA&ab_channel=SrceCde)
+1. Open this link: https://console.aws.amazon.com/iam/home?#/roles
+   - And create one IAN rule:
+      - Click on Create role;
+      - Click on EC2 and after click on next;
+      - after that pick “AmazonS3FullAccess"
+      - click on next and next again;
+      - finaly input the name "ec2-S3-access”;
+      
+# Rever essa parte - Inicio
+
+Crie mais uma rule 
+  Selecione Lambda e click em next
+  Depois selecione “AWSLambdaBasicExecutionRole, selecione também “AmazonEC2FullAccess” e click em next Informe Name / “Lambda_ssh”
+
+# Rever essa parte - Fim
+      
+
+
+2. You need to follow this tutorial (in this video you can visually see the information: https://www.youtube.com/watch?v=jFAipm0NsVA&ab_channel=SrceCde)
    - Open this link: https://console.aws.amazon.com/console/home?
       - Input "EC2" on field "Find Services": (like https://youtu.be/jFAipm0NsVA?t=104);
       - In the next page, click on button "Launch Instance": (https://youtu.be/jFAipm0NsVA?t=111);
       - In the next page, select "Ubuntu Server 20.04" (64-bits): (https://youtu.be/jFAipm0NsVA?t=114);
       - In the next page, click on button "Next": with de machine "Free tier eligible" selected (https://youtu.be/jFAipm0NsVA?t=124);
-      - In the next page, click on button "Next";
+      - In the next page, click on button "Next": with "ec2-S3-access” on the field "IAM role" selected;
       - In the next page, click on button "Next", again;
       - In the next page: (https://youtu.be/jFAipm0NsVA?t=140);
          - click on "click to add name tag";
@@ -34,9 +52,9 @@
       - In the next page, 
         - click on button "conect" again;
 
-2. Create one domain on duckdns **https://www.duckdns.org/**. with the IP by EC2 from AWS (ipAWS)
+3. Create one domain on duckdns **https://www.duckdns.org/**. with the IP by EC2 from AWS (ipAWS)
 
-3. Create one repository with name "smartboards3" in the link: https://s3.console.aws.amazon.com/s3/
+4. Create one repository with name "smartboards3" in the link: https://s3.console.aws.amazon.com/s3/
    - Click in the button create buckets and the next page input on field "bucket name": "smartboards3";
    - after that click on create bucket;
 
@@ -56,30 +74,6 @@
 
 
 5. Install the tools (this is optional) File editor, Terminal & SSH on "Hassio / Supervisor
-
-
-
-
-# Rever essa parte - Inicio
-
-Vai até o IAM 
-Click em Create role
-  Selecione EC2  e click em next
-  Depois selecione “AmazonS3FullAccess  e click em next
-  Informe Name / “ec2 S3 access”
-
-Crie mais uma rule 
-  Selecione Lambda  e click em next
-  Depois selecione “AWSLambdaBasicExecutionRole , selecione também “AmazonEC2FullAccess”, selecione também “AmazonS3FullAccess” e click em next
-  Informe Name / “Lambda_ssh”
-
-Video de referencia: https://www.youtube.com/watch?v=jFAipm0NsVA&ab_channel=SrceCde
-
-Na Criação do instancia do EC2 selecione o iAM “ec2 S3 access” e “”
-
-# Rever essa parte - Fim
-
-
 
 
 # C - Built the certification to Mosquittto and firmware ESP8266
