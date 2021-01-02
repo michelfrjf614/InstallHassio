@@ -10,6 +10,7 @@
          - click on "click to add name tag";
          - input "Lambda-Layer";
          - and click on button "Next";
+         - and click on button "Next", again;
       - In the next page, clck on button "AddRule":
          - on filed "Type" select the value "HTTP";
          - Add the porta 8123, 1883, 8883, 1884, 8884, 9000, 81 like image above to open ports
