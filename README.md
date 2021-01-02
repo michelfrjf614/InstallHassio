@@ -11,11 +11,15 @@
          - click on "click to add name tag";
          - input "Lambda-Layer";
          - and click on button "Next";
-      - In the next page, clck on button "AddRule":
-         - on filed "Type" select the value "HTTP";
-         - Add the porta 8123, 1883, 8883, 1884, 8884, 9000, 81 like image above to open ports
-            - Until Fig. 9 (https://d2908q01vomqb2.cloudfront.net/f6e1126cedebf23e1463aee73f9df08783640400/2020/05/04/Screen-Shot-2020-04-22-at-2.18.38-PM.png)
-         - and click on button "Review and Launch";
+      - In the next page, input on field "Security group name" the name: "HassIO_Ports"
+         - input on field "Security group name" the name: "HassIO_Ports";
+         - input on field "Description" the name: "Ports opens of HassIO";
+         - click on button "AddRule":
+            - on filed "Type" select the value "HTTP";
+            - Add the porta 22, 81, 8123, 1883, 8883, 1884, 8884, 9000, similar image above to open ports
+               - Until Fig. 9 (https://d2908q01vomqb2.cloudfront.net/f6e1126cedebf23e1463aee73f9df08783640400/2020/05/04/Screen-Shot-2020-04-22-at-2.18.38-PM.png)
+            - for all ports, inputs "Sources" like "AnyWhere";
+            - and click on button "Review and Launch";
          
       - In the next page, click on button "Launch": (https://youtu.be/jFAipm0NsVA?t=178)
          - select "Create a new pair";
