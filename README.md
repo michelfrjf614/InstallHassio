@@ -3,7 +3,7 @@
    - Open this link: https://console.aws.amazon.com/console/home?
       - Input "EC2" on field "Find Services": (like https://youtu.be/jFAipm0NsVA?t=104);
       - In the next page, click on button "Launch Instance": (https://youtu.be/jFAipm0NsVA?t=111);
-      - In the next page, select "Ubuntu Servrer 20.04" (64-bits): (https://youtu.be/jFAipm0NsVA?t=114);
+      - In the next page, select "Ubuntu Server 20.04" (64-bits): (https://youtu.be/jFAipm0NsVA?t=114);
       - In the next page, click on button "Next": with de machine "Free" selected (https://youtu.be/jFAipm0NsVA?t=124);
       - In the next page, click on button "Next";
       - In the next page: (https://youtu.be/jFAipm0NsVA?t=140);
