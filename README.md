@@ -27,7 +27,7 @@
          - and click on the button "Download key pair";
          - check the checkbox;
          - click on button "Launch Instance":
-         - after that, click on button "View INstance";
+         - after that, click on button "View Instance";
       - In the next page, 
         - check the instance 
         - click on button "conect";
