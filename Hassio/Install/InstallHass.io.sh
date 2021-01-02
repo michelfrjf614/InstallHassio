@@ -56,59 +56,53 @@ sudo docker run -d -p 9000:9000 -p 8000:8000 --name portainer --restart always -
 
 echo ""
 echo ""
-echo "[Info] Aguardando 60 segundos para configurar todo o mosquitto"
+echo "[Info] Wait 120 seconds for set all config Mosquitto"
 sleep 5
-echo "[Info] falta 55 segundos"
+echo "[Info] missing 115 seconds"
 sleep 5
-echo "[Info] falta 50 segundos"
+echo "[Info] missing 110 seconds"
 sleep 5
-echo "[Info] falta 45 segundos"
+echo "[Info] missing 105 seconds"
 sleep 5
-echo "[Info] falta 40 segundos"
+echo "[Info] missing 100 seconds"
 sleep 5
-echo "[Info] falta 35 segundos"
+echo "[Info] missing 95 seconds"
 sleep 5
-echo "[Info] falta 30 segundos"
+echo "[Info] missing 90 seconds"
 sleep 5
-echo "[Info] falta 25 segundos"
+echo "[Info] missing 85 seconds"
 sleep 5
-echo "[Info] falta 20 segundos"
+echo "[Info] missing 80 seconds"
 sleep 5
-echo "[Info] falta 15 segundos"
+echo "[Info] missing 75 seconds"
 sleep 5
-echo "[Info] falta 10 segundos"
+echo "[Info] missing 70 seconds"
 sleep 5
-echo "[Info] falta 5 segundos"
+echo "[Info] missing 65 seconds"
 sleep 5
-echo "[Info] passou 60 segundos"
-
-echo ""
-echo ""
-echo "[Info] Aguardando 60 segundos para configurar todo o mosquitto"
+echo "[Info] missing 60 seconds"
 sleep 5
-echo "[Info] falta 55 segundos"
+echo "[Info] missing 55 seconds"
 sleep 5
-echo "[Info] falta 50 segundos"
+echo "[Info] missing 50 seconds"
 sleep 5
-echo "[Info] falta 45 segundos"
+echo "[Info] missing 45 seconds"
 sleep 5
-echo "[Info] falta 40 segundos"
+echo "[Info] missing 40 seconds"
 sleep 5
-echo "[Info] falta 35 segundos"
+echo "[Info] missing 35 seconds"
 sleep 5
-echo "[Info] falta 30 segundos"
+echo "[Info] missing 30 seconds"
 sleep 5
-echo "[Info] falta 25 segundos"
+echo "[Info] missing 25 seconds"
 sleep 5
-echo "[Info] falta 20 segundos"
+echo "[Info] missing 20 seconds"
 sleep 5
-echo "[Info] falta 15 segundos"
+echo "[Info] missing 15 seconds"
 sleep 5
-echo "[Info] falta 10 segundos"
+echo "[Info] missing 10 seconds"
 sleep 5
-echo "[Info] falta 5 segundos"
-sleep 5
-echo "[Info] passou 60 segundos"
+echo "[Info] missing 5 seconds"
 
 echo ""
 echo ""
@@ -131,7 +125,7 @@ sudo curl -sL https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main
 
 
 
-info "Digite o nome do nome dominio no duckdns. Exemplo se for NOME_DO_DNS.duckdns.org informar o NOME_DO_DNS:"
+info "Input the duckdns name. Example NAME_DNS.duckdns.org informar o NOME_DO_DNS:"
 read answer < /dev/tty
 sed -i "s/smartboardneww/$answer/" /usr/share/hassio/homeassistant/configuration.yaml
 
