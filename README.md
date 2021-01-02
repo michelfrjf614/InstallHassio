@@ -44,6 +44,7 @@
 # B - Intalls HASSIO on Ubuntu, config tools from HASSIO and confid datas to manager users
 
 1. Exec: **sudo curl -L https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/Install/InstallHass.io.sh | bash -s**
+   - (OBS.: Sugestion: Copy the text above and paste it into your browser's address bar, then copy the text again and paste it into the terminal)
    - During the execution input domain from duckdns
 
 2. Uodate domain on duckdns **https://www.duckdns.org/** with the IP by EC2 from AWS (ipAWS)
