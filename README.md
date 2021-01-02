@@ -37,6 +37,8 @@
 2. Create one domain on duckdns **https://www.duckdns.org/**. with the IP by EC2 from AWS (ipAWS)
 
 3. Create one repository with name "smartboards3" in the link: https://s3.console.aws.amazon.com/s3/
+   - Click in the button create buckets and the next page input on field "bucket name": "smartboards3";
+   - after that click on create bucket;
 
 
 # B - Intalls HASSIO on Ubuntu, config tools from HASSIO and confid datas to manager users
