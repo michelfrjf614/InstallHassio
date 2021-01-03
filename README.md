@@ -3,14 +3,14 @@
    - And create one IAN rule:
       - Click on Create role;
       - Click on EC2 and after click on next;
-      - after that pick “AmazonS3FullAccess"
+      - after that, pick “AmazonS3FullAccess"
       - click on next and next again;
       - finaly input the name "ec2-S3-access”;
-         - Rever essa parte - Inicio
-            - Crie mais uma rule 
-            - Selecione Lambda e click em next
-            - Depois selecione “AWSLambdaBasicExecutionRole, selecione também “AmazonEC2FullAccess” e click em next Informe Name / “Lambda_ssh”
-         - Rever essa parte - Fim
+      - after that, click on Create role;
+      - Click on Lambda and after click on next;
+      - after that pick “AWSLambdaBasicExecutionRole" and "AmazonEC2FullAccess"
+      - click on next and next again;
+      - finaly input the name "LambdaAccess”;
 
 2. You need to follow this tutorial (in this video you can visually see the information: https://www.youtube.com/watch?v=jFAipm0NsVA&ab_channel=SrceCde)
    - Open this link: https://console.aws.amazon.com/console/home?
