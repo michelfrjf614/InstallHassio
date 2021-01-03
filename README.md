@@ -82,7 +82,7 @@
 # C - Built the certification to Mosquittto and firmware ESP8266
 
 1. sudo curl -L https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/certificates/certificates.sh | bash -s
-   - Update the IP on domain from duckdns;
+   - Input the DNS_Domain from duckdns (https://www.duckdns.org/domains), **Obs.: Only DNS_Domain, not DNS_Domain.duckdns.org **;
    - Get the address showed in the final on terminal 
 
 # D - Commands to hekp you
