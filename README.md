@@ -5,7 +5,7 @@
       - Click on EC2 and after click on next;
       - after that, pick “AmazonS3FullAccess"
       - click on next and next again;
-      - finaly input the name "ec2-S3-access”;
+      - finaly input the name "ec2-S3-access”;  --**REVER: POIS DURANTE UM TESTE FOI NECESSÁRIO RECRIAR ESSA RULE**
       - after that, click on Create role;
       - Click on Lambda and after click on next;
       - after that pick “AWSLambdaBasicExecutionRole" and "AmazonEC2FullAccess"
@@ -62,7 +62,8 @@
 
 2. Update domain on duckdns **https://www.duckdns.org/** with the IP by EC2 from AWS (ipAWS);
 
-3. Open ipAWS:8123, create your user and password and restart the instance;
+3. Open ipAWS:8123, create your user and password and restart the instance
+   - To restart got to https://console.aws.amazon.com/ec2/v2/home?#Instances select "Lambda-Layer" and click "Instance State" / "Start Instance";
 
 4. After that, open ipAWS:8123 again and on menu "Hassio / Supervisor / Add-on Store" install this Addons: Mosquitto, MariaDB, Duckdns
 
@@ -71,8 +72,11 @@
    - At the configuration duckdns chage o dns **YOUR_DNS**.duckdns.org to the dns inputed on duckdns
    - After that, start all addons;
 
+6. Restar your Hassio, go to "Configuration" / "Server Control" / "Restart";
 
-6. Install the tools (this is optional) File editor, Terminal & SSH on "Hassio / Supervisor
+7. After that, open o Hassio with https://**YOUR_DNS**.duckdns.org:8123;  --**REVER DEPOIS PQ AINDA É PRECISO COLOCCAR A PORTA**
+
+7. Install the tools (this is optional) File editor, Terminal & SSH on "Hassio / Supervisor
 
 
 # C - Built the certification to Mosquittto and firmware ESP8266
