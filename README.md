@@ -60,7 +60,7 @@
    - (OBS.: Sugestion: Copy the text above and paste it into your browser's address bar, then copy the text again and paste it into the terminal)
    - During the execution, input y (for yes) and domain from duckdns
 
-2. Uodate domain on duckdns **https://www.duckdns.org/** with the IP by EC2 from AWS (ipAWS)
+2. Update domain on duckdns **https://www.duckdns.org/** with the IP by EC2 from AWS (ipAWS)
 
 3. Open ipAWS:8123 and on menu "Hassio / Supervisor" install Mosquitto, MariaDB, Duckdns
 
