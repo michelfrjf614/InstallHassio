@@ -86,8 +86,16 @@
    - Get the address showed in the final on terminal 
 
 # D - Config Lambda
-
-
+   - Open this tha Lambda service on the link: https://sa-east-1.console.aws.amazon.com/lambda/home?region=sa-east-1#/functions (in this video you can visually see the information: https://youtu.be/jFAipm0NsVA?t=1095);
+   - Click Layer;
+   - Click create Layer;
+   - Input Name: "paramikoPackage"'
+   - Select, "Upload a file from Amazon S3";
+   - Go to https://s3.console.aws.amazon.com/s3/buckets/smartboards3 and click on "packageParamiko.zip";
+   - Copy Object URL;
+   - Paste on "Amazon S3 link URL";
+   - Compatible runtime: "Phython 3.8";
+   - Click Create;
 
 
 # E - Commands to hekp you
