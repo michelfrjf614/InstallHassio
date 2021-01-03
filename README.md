@@ -8,9 +8,9 @@
       - finaly input the name "ec2-S3-access”;  --**REVER: POIS DURANTE UM TESTE FOI NECESSÁRIO RECRIAR ESSA RULE**
       - after that, click on Create role;
       - Click on Lambda and after click on next;
-      - after that pick “AWSLambdaBasicExecutionRole" and "AmazonEC2FullAccess"
+      - after that pick “AWSLambdaBasicExecutionRole", "AmazonS3FullAccess" and "AmazonEC2FullAccess"
       - click on next and next again;
-      - finaly input the name "LambdaAccess”;
+      - finaly input the name "Lambda_SSH”;
 
 2. You need to follow this tutorial (in this video you can visually see the information: https://www.youtube.com/watch?v=jFAipm0NsVA&ab_channel=SrceCde)
    - Open this link: https://console.aws.amazon.com/console/home?
@@ -37,7 +37,7 @@
       - In the next page, click on button "Launch": (https://youtu.be/jFAipm0NsVA?t=178)
          - select "Create a new pair";
          - and informe on "key pair name" the information "labdassh";
-         - and click on the button "Download key pair";
+         - and click on the button "Download key pair" and save with the name "lambdassh.pem";
          - check the checkbox;
          - click on button "Launch Instance":
          - after that, click on button "View Instance";
@@ -52,6 +52,9 @@
 4. Create one repository with name "smartboards3" in the link: https://s3.console.aws.amazon.com/s3/
    - Click in the button create buckets and the next page input on field "bucket name": "smartboards3";
    - after that click on create bucket;
+   
+5. Upload Certificate;
+   - Upload o certificate "lambdassh.pem" to "smartboards3";
 
 
 # B - Intalls HASSIO on Ubuntu, config tools from HASSIO and config datas to manager users
@@ -87,6 +90,8 @@
 
 # D - Config Lambda
    - Open this tha Lambda service on the link: https://sa-east-1.console.aws.amazon.com/lambda/home?region=sa-east-1#/functions (in this video you can visually see the information: https://youtu.be/jFAipm0NsVA?t=1095);
+   
+1. Create Layer;
    - Click Layer;
    - Click create Layer;
    - Input Name: "paramikoPackage"'
@@ -96,6 +101,9 @@
    - Paste on "Amazon S3 link URL";
    - Compatible runtime: "Phython 3.8";
    - Click Create;
+
+2. Create Lambda;
+   - 
 
 
 # E - Commands to hekp you
