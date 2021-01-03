@@ -54,7 +54,7 @@
    - after that click on create bucket;
 
 
-# B - Intalls HASSIO on Ubuntu, config tools from HASSIO and confid datas to manager users
+# B - Intalls HASSIO on Ubuntu, config tools from HASSIO and config datas to manager users
 
 1. Exec: **sudo curl -L https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/Install/InstallHass.io.sh | bash -s**
    - (OBS.: Sugestion: Copy the text above and paste it into your browser's address bar, then copy the text again and paste it into the terminal)
@@ -85,7 +85,12 @@
    - Input the DNS_Domain from duckdns (https://www.duckdns.org/domains), **Obs.: Only DNS_Domain, not DNS_Domain.duckdns.org **;
    - Get the address showed in the final on terminal 
 
-# D - Commands to hekp you
+# D - Config Lambda
+
+
+
+
+# E - Commands to hekp you
 
 1. [Info] Init service - Run Hass.io
    - systemctl start hassio-supervisor.service
