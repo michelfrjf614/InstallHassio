@@ -67,6 +67,7 @@
 4. After that, open ipAWS:8123 again and on menu "Hassio / Supervisor / Add-on Store" install this Addons: Mosquitto, MariaDB, Duckdns
 
 5. Copy the infomations from git to Hassio / Supervisor -> Mosquitto / MariaDB / Duckdns -> Configuration. Get the information in the link **https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/Tools/configTools** 
+   - get your token on site duckdns.org and chang to "**GET_YOUR_TOKEN_ON_DUCKDNS.ORG_AND_INPUP_HERE**"
    - At the configuration duckdns chage o dns **YOUR_DNS**.duckdns.org to the dns inputed on duckdns
    - After that, start all addons;
 
