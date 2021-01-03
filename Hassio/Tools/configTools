@@ -5,7 +5,7 @@ lets_encrypt:
   accept_terms: true
   certfile: fullchain.pem
   keyfile: privkey.pem
-token: 29b86109-9eed-4bdb-8d18-cf20417f25aa
+token: GET_YOUR_TOKEN_ON_DUCKDNS.ORG_AND_INPUP_HERE
 domains:
   - YOUR_DNS.duckdns.org
 aliases: []
