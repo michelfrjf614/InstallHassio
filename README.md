@@ -60,15 +60,17 @@
    - (OBS.: Sugestion: Copy the text above and paste it into your browser's address bar, then copy the text again and paste it into the terminal)
    - During the execution, input y (for yes) and domain from duckdns
 
-2. Update domain on duckdns **https://www.duckdns.org/** with the IP by EC2 from AWS (ipAWS)
+2. Update domain on duckdns **https://www.duckdns.org/** with the IP by EC2 from AWS (ipAWS);
 
-3. Open ipAWS:8123 and on menu "Hassio / Supervisor" install Mosquitto, MariaDB, Duckdns
+3. Open ipAWS:8123, create your user and password and restart the instance;
 
-4. Copy the infomations from git to Hassio / Supervisor -> Mosquitto / MariaDB / Duckdns -> Configuration. Get the information in the link **https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/Tools/configTools** 
+4. After that, open ipAWS:8123 again and on menu "Hassio / Supervisor / Add-on Store" install this Addons: Mosquitto, MariaDB, Duckdns
+
+5. Copy the infomations from git to Hassio / Supervisor -> Mosquitto / MariaDB / Duckdns -> Configuration. Get the information in the link **https://raw.githubusercontent.com/michelfrjf614/InstallHassio/main/Hassio/Tools/configTools** 
    - At the configuration duckdns chage o dns **smartboardneww**.duckdns.org to the dns inputed on duckdns
 
 
-5. Install the tools (this is optional) File editor, Terminal & SSH on "Hassio / Supervisor
+6. Install the tools (this is optional) File editor, Terminal & SSH on "Hassio / Supervisor
 
 
 # C - Built the certification to Mosquittto and firmware ESP8266
