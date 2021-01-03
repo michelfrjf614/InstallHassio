@@ -103,8 +103,17 @@
    - Click Create;
 
 2. Create Lambda;
-   - 
-
+   - Create function: https://sa-east-1.console.aws.amazon.com/lambda/home?#/create/function;
+   - Input Funbction Name: "sshLambdaEC2";
+   - Select Runtime: Python 3.8;
+   - Click on choose or create an execution rule:
+     - click "Use an exesting rule" and select "Lambda_SSH";
+     
+3. Config Lambda;
+   - Click layer and edit;
+   - Choose personalite layer: "paramikoPackage" and version "1"
+   
+   
 
 # E - Commands to hekp you
 
